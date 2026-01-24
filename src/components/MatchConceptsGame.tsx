@@ -164,7 +164,7 @@ export default function MatchConceptsGame({ isOpen, onClose }: MatchConceptsGame
                                     <button
                                         key={card.id}
                                         onClick={() => handleCardClick(card)}
-                                        className={`p-4 rounded-xl h-40 flex items-center justify-center transition-all duration-300 ${cardStyle}`}
+                                        className={`p-4 rounded-xl min-h-[160px] h-auto flex items-center justify-center transition-all duration-300 ${cardStyle}`}
                                     >
                                         <div className="text-center">
                                             {card.type === "term" && (

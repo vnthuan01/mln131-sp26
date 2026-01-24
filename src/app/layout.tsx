@@ -3,6 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Vấn Đề Dân Tộc và Tôn Giáo | Tri Thức Việt",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
   description: "Tìm hiểu về vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội - Chương trình học tương tác dành cho sinh viên đại học.",
   keywords: "dân tộc, tôn giáo, chủ nghĩa xã hội, Việt Nam, giáo dục, Mác-Lênin",
   authors: [{ name: "Tri Thức Việt" }],
@@ -24,6 +28,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="icon" href="/logo-mln131.jpeg" />
+        <link rel="shortcut icon" href="/logo-mln131.jpeg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"

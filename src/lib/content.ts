@@ -6,6 +6,9 @@ export const siteConfig = {
     title: "Vấn Đề Dân Tộc và Tôn Giáo Trong Thời Kỳ Quá Độ Lên CNXH",
     subtitle: "Hiểu về Dân tộc, Tôn giáo và Đoàn kết Dân tộc tại Việt Nam ngày nay",
     description: "Chương trình học tương tác về Chủ nghĩa Xã hội Khoa học dành cho sinh viên đại học",
+    icons: {
+        icon: "/logo-mln131.png",
+    },
 };
 
 export const heroContent = {

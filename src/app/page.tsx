@@ -9,9 +9,11 @@ import ProgressIndicator from "@/components/ProgressIndicator";
 import PuzzleGame from "@/components/PuzzleGame";
 import KnowledgeQuizGame from "@/components/KnowledgeQuizGame";
 import MatchConceptsGame from "@/components/MatchConceptsGame";
+import GameSelectionModal from "@/components/GameSelectionModal";
 import { sections, introContent, conclusionContent } from "@/lib/content";
 
 export default function Home() {
+  const [isGameSelectionOpen, setIsGameSelectionOpen] = useState(false);
   const [isPuzzleOpen, setIsPuzzleOpen] = useState(false);
   const [isQuizGameOpen, setIsQuizGameOpen] = useState(false);
   const [isMatchGameOpen, setIsMatchGameOpen] = useState(false);
@@ -56,7 +58,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <HeroSection onPlayGame={() => setIsPuzzleOpen(true)} />
+        <HeroSection onPlayGame={() => setIsGameSelectionOpen(true)} />
 
         {/* Introduction */}
         <section className="py-12 bg-white">
@@ -117,7 +119,7 @@ export default function Home() {
               {/* Final CTA */}
               <div className="mt-10 flex flex-wrap justify-center gap-4">
                 <button
-                  onClick={() => setIsPuzzleOpen(true)}
+                  onClick={() => setIsGameSelectionOpen(true)}
                   className="flex items-center gap-2 px-8 py-4 rounded-xl bg-[#ee2b2b] text-white font-bold shadow-lg shadow-[#ee2b2b]/20 hover:bg-red-700 hover:scale-105 transition-all"
                 >
                   <span className="material-symbols-outlined">
@@ -270,6 +272,13 @@ export default function Home() {
       <Footer />
 
       {/* Game Modals */}
+      <GameSelectionModal
+        isOpen={isGameSelectionOpen}
+        onClose={() => setIsGameSelectionOpen(false)}
+        onSelectPuzzle={() => setIsPuzzleOpen(true)}
+        onSelectQuiz={() => setIsQuizGameOpen(true)}
+        onSelectMatch={() => setIsMatchGameOpen(true)}
+      />
       <PuzzleGame isOpen={isPuzzleOpen} onClose={() => setIsPuzzleOpen(false)} />
       <KnowledgeQuizGame isOpen={isQuizGameOpen} onClose={() => setIsQuizGameOpen(false)} />
       <MatchConceptsGame isOpen={isMatchGameOpen} onClose={() => setIsMatchGameOpen(false)} />

@@ -20,7 +20,7 @@ export default function HeroSection({ onPlayGame }: HeroSectionProps) {
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
                     {/* Left Content */}
-                    <div className="flex-1 text-center lg:text-left">
+                    <div className="flex-1 text-center lg:text-left relative z-10">
                         {/* Badge */}
                         <div className="inline-flex items-center gap-2 mb-6">
                             <div className="h-[2px] w-8 bg-[#ee2b2b]"></div>
