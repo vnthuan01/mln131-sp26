@@ -265,39 +265,39 @@ export const puzzleGameContent = {
     images: [
         {
             id: 1,
-            src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Ho_Chi_Minh_reading_the_Declaration_of_Independence.jpg/640px-Ho_Chi_Minh_reading_the_Declaration_of_Independence.jpg",
+            src: "https://inkythuatso.com/uploads/thumbnails/800/2023/03/hinh-anh-bac-ho-doc-ban-tuyen-ngon-doc-lap-1-04-14-04-53.jpg",
             alt: "Bác Hồ đọc Tuyên ngôn độc lập",
-            message: "Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa."
+            message: "Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa. Trích: INKYTHUATSO.COM"
         },
         {
             id: 2,
-            src: "https://vnu.edu.vn/upload/2018/11/24/image/dantoc.jpg",
+            src: "https://th.bing.com/th/id/R.0960f5c8a24ace04cbd23a229abb7500?rik=JpBA5rZVxQl1Nw&pid=ImgRaw&r=0",
             alt: "Đại đoàn kết 54 dân tộc",
-            message: "54 dân tộc anh em đoàn kết, thống nhất cùng phát triển đất nước."
+            message: "54 dân tộc anh em đoàn kết, thống nhất cùng phát triển đất nước. Trích: SCR.VN"
         },
         {
             id: 3,
-            src: "https://cdn.tuoitre.vn/thumb_w/730/2022/12/24/nguoi-dan-ha-noi-do-ve-nha-tho-lon-don-giang-sinh-16718917845341258164058.jpg",
+            src: "https://lahata.vn/files/news/2021/12/22/-111847.jpg",
             alt: "Giáng sinh tại Việt Nam",
-            message: "Không khí Giáng sinh tại Nhà thờ Lớn Hà Nội, thể hiện tự do tín ngưỡng."
+            message: "Không khí Giáng sinh tại Nhà thờ Lớn Hà Nội, thể hiện tự do tín ngưỡng. Trích: https://lahata.vn/van-hoa-le-giang-sinh-o-viet-nam-d20.html"
         },
         {
             id: 4,
-            src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=400&fit=crop",
+            src: "https://tuyenquang.dcs.vn/Image/Large/2024101518442_148039.jpg",
             alt: "Thanh niên Việt Nam",
-            message: "Thế hệ trẻ Việt Nam tiếp bước cha anh xây dựng và bảo vệ Tổ quốc."
+            message: "Thế hệ trẻ Việt Nam tiếp bước cha anh xây dựng và bảo vệ Tổ quốc. Trích: https://tuyenquang.dcs.vn/"
         },
         {
             id: 5,
-            src: "https://bcp.cdnchinhphu.vn/334894974524682240/2023/11/17/ttxvn17112023021946359-1700236056586326177519.jpg",
+            src: "https://lochoa.locninh.binhphuoc.gov.vn/uploads/lochoa/news/2024_11/image_22.png",
             alt: "Ngày hội Đại đoàn kết",
-            message: "Ngày hội Đại đoàn kết toàn dân tộc ở khu dân cư."
+            message: "Ngày hội Đại đoàn kết toàn dân tộc ở khu dân cư. Trích: https://lochoa.locninh.binhphuoc.gov.vn/"
         },
         {
             id: 6,
-            src: "https://images.vietnamtourism.gov.vn/vn/images/2021/04/26/102435_1_2.jpg",
+            src: "https://img5.thuthuatphanmem.vn/uploads/2022/01/16/anh-chua-tam-chuc-nhin-tu-xa_031721487.jpg",
             alt: "Chùa Tam Chúc",
-            message: "Chùa Tam Chúc - Ngôi chùa lớn nhất thế giới tại Việt Nam."
+            message: "Chùa Tam Chúc - Ngôi chùa lớn nhất thế giới tại Việt Nam. Trích: https://img5.thuthuatphanmem.vn/"
         }
     ],
     completionMessages: [
@@ -408,6 +408,76 @@ export const knowledgeQuizGameContent = {
             options: ["Bình đẳng, đoàn kết, tôn trọng, giúp nhau cùng phát triển", "Cạnh tranh lành mạnh", "Tự trị hoàn toàn", "Phân chia khu vực"],
             correctIndex: 0,
             explanation: "Nguyên tắc Hiến định: 'Các dân tộc bình đẳng, đoàn kết, tôn trọng và giúp nhau cùng phát triển'."
+        },
+        {
+            id: 11,
+            question: "Chủ nghĩa Mác - Lênin khẳng định vấn đề dân tộc và tôn giáo có mối quan hệ như thế nào?",
+            options: ["Tách biệt hoàn toàn", "Liên quan mật thiết", "Đối kháng gay gắt", "Không ảnh hưởng nhau"],
+            correctIndex: 1,
+            explanation: "Chủ nghĩa Mác - Lênin luôn xem xét vấn đề dân tộc và tôn giáo trong mối quan hệ biện chứng, gắn bó mật thiết với nhau."
+        },
+        {
+            id: 12,
+            question: "Đặc trưng nào KHÔNG phải của dân tộc theo quan điểm Mác - Lênin?",
+            options: ["Chung lãnh thổ", "Chung ngôn ngữ", "Chung huyết thống", "Chung đời sống kinh tế"],
+            correctIndex: 2,
+            explanation: "Chung huyết thống là đặc trưng của thị tộc, bộ lạc. Dân tộc là cộng đồng chính trị - xã hội, không nhất thiết chung huyết thống."
+        },
+        {
+            id: 13,
+            question: "Ở Việt Nam, tôn giáo nào có số lượng tín đồ đông nhất?",
+            options: ["Công giáo", "Phật giáo", "Tin Lành", "Hòa Hảo"],
+            correctIndex: 1,
+            explanation: "Phật giáo hiện là tôn giáo có số lượng tín đồ đông nhất tại Việt Nam."
+        },
+        {
+            id: 14,
+            question: "Chính sách của Nhà nước ta đối với các tổ chức tôn giáo là gì?",
+            options: ["Cấm hoạt động", "Kiểm soát gay gắt", "Công nhận và tạo điều kiện hoạt động theo pháp luật", "Khuyến khích phát triển tự phát"],
+            correctIndex: 2,
+            explanation: "Nhà nước công nhận và tạo điều kiện cho các tổ chức tôn giáo hoạt động theo hiến pháp và pháp luật."
+        },
+        {
+            id: 15,
+            question: "Tín ngưỡng và tôn giáo khác nhau ở điểm cơ bản nào?",
+            options: ["Tín ngưỡng không có hệ thống giáo lý, giáo luật chặt chẽ như tôn giáo", "Tôn giáo không có niềm tin", "Tín ngưỡng chỉ có ở Việt Nam", "Giống hệt nhau"],
+            correctIndex: 0,
+            explanation: "Tôn giáo có hệ thống giáo lý, giáo luật, tổ chức chặt chẽ, còn tín ngưỡng thường mang tính dân gian, truyền thống hơn."
+        },
+        {
+            id: 16,
+            question: "Câu 'Thứ nhất là tu tại gia, thứ nhì tu chợ, thứ ba tu chùa' nói về điều gì?",
+            options: ["Địa điểm tu hành", "Thứ tự ưu tiên trong tu dưỡng đạo đức", "Cách thức xây chùa", "Quy định của nhà nước"],
+            correctIndex: 1,
+            explanation: "Câu này nhấn mạnh việc tu dưỡng đạo đức ngay trong đời sống hàng ngày (tại gia, giao tiếp xã hội) là quan trọng nhất."
+        },
+        {
+            id: 17,
+            question: "Nội dung nào KHÔNG nằm trong chính sách dân tộc của Đảng và Nhà nước ta?",
+            options: ["Đầu tư phát triển kinh tế-xã hội", "Bảo tồn văn hóa", "Đồng hóa các dân tộc", "Đào tạo cán bộ dân tộc thiểu số"],
+            correctIndex: 2,
+            explanation: "Đảng và Nhà nước ta kiên quyết chống tư tưởng kỳ thị, chia rẽ hoặc đồng hóa cưỡng bức các dân tộc."
+        },
+        {
+            id: 18,
+            question: "Việt Nam là quốc gia:",
+            options: ["Đơn dân tộc, đơn tôn giáo", "Đa dân tộc, đa tôn giáo", "Đa dân tộc, ít tôn giáo", "Đơn dân tộc, đa tôn giáo"],
+            correctIndex: 1,
+            explanation: "Việt Nam là quốc gia thống nhất của 54 dân tộc anh em và có nhiều tôn giáo cùng hoạt động."
+        },
+        {
+            id: 19,
+            question: "Xu hướng biến đổi của tôn giáo ở Việt Nam hiện nay là gì?",
+            options: ["Thế tục hóa", "Đa dạng hóa", "Tích cực tham gia hoạt động xã hội", "Tất cả các ý trên"],
+            correctIndex: 3,
+            explanation: "Tôn giáo ở Việt Nam đang có xu hướng thế tục hóa (gắn với đời sống), đa dạng hóa và tích cực tham gia các hoạt động xã hội."
+        },
+        {
+            id: 20,
+            question: "Đại đoàn kết toàn dân tộc là đường lối chiến lược của?",
+            options: ["Cách mạng Việt Nam", "Riêng giai cấp công nhân", "Các tổ chức tôn giáo", "Cộng đồng quốc tế"],
+            correctIndex: 0,
+            explanation: "Đại đoàn kết toàn dân tộc là đường lối chiến lược của cách mạng Việt Nam, là động lực và nguồn lực to lớn trong xây dựng và bảo vệ Tổ quốc."
         }
     ]
 };
@@ -465,5 +535,4 @@ export const navItems = [
     { label: "Trang chủ", href: "#hero" },
     { label: "Nội dung", href: "#content" },
     { label: "Game học tập", href: "#game" },
-    { label: "Trắc nghiệm", href: "#quiz" }
 ];

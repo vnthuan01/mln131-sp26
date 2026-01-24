@@ -97,7 +97,7 @@ export default function MatchConceptsGame({ isOpen, onClose }: MatchConceptsGame
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in-up">
-            <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-h-[90vh] overflow-y-auto max-w-2xl md:max-w-6xl transition-all duration-300">
                 {/* Header */}
                 <div className="p-6 border-b border-gray-100 flex items-center justify-between">
                     <div className="flex items-center gap-3">

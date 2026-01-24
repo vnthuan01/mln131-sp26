@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { knowledgeQuizGameContent } from "@/lib/content";
 
 interface KnowledgeQuizGameProps {
@@ -20,9 +20,9 @@ export default function KnowledgeQuizGame({ isOpen, onClose }: KnowledgeQuizGame
 
     // Initialize game
     const startGame = useCallback(() => {
-        // Shuffle and pick 5 random questions
+        // Shuffle and pick 10 random questions
         const shuffled = [...knowledgeQuizGameContent.questions].sort(() => 0.5 - Math.random());
-        setGameQuestions(shuffled.slice(0, 5));
+        setGameQuestions(shuffled.slice(0, 10));
 
         setGameState("playing");
         setCurrentQuestionIndex(0);
@@ -32,6 +32,14 @@ export default function KnowledgeQuizGame({ isOpen, onClose }: KnowledgeQuizGame
         setIsAnswered(false);
         setStreak(0);
     }, []);
+
+    // Reset on open
+    useEffect(() => {
+        if (isOpen) {
+            setGameState("intro");
+            setScore(0);
+        }
+    }, [isOpen]);
 
     // Timer logic
     useEffect(() => {
@@ -78,13 +86,25 @@ export default function KnowledgeQuizGame({ isOpen, onClose }: KnowledgeQuizGame
         }
     };
 
+    // Auto-scroll to feedback when answered
+    const feedbackRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (isAnswered && feedbackRef.current) {
+            // Small timeout to ensure DOM is updated
+            setTimeout(() => {
+                feedbackRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }, 100);
+        }
+    }, [isAnswered]);
+
     if (!isOpen) return null;
 
     const currentQuestion = gameQuestions[currentQuestionIndex];
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in-up">
-            <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-h-[90vh] overflow-y-auto max-w-2xl md:max-w-5xl transition-all duration-300">
                 {/* Header */}
                 <div className="p-6 border-b border-gray-100 flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -120,7 +140,7 @@ export default function KnowledgeQuizGame({ isOpen, onClose }: KnowledgeQuizGame
                             </div>
                             <h3 className="text-2xl font-bold text-[#181111] mb-2">Sẵn sàng thử thách?</h3>
                             <p className="text-[#896161] mb-8 max-w-md mx-auto">
-                                Bạn sẽ có 5 câu hỏi ngẫu nhiên. Mỗi câu có 30 giây để trả lời. Trả lời càng nhanh điểm càng cao!
+                                Bạn sẽ có 10 câu hỏi ngẫu nhiên. Mỗi câu có 30 giây để trả lời. Trả lời càng nhanh điểm càng cao!
                             </p>
                             <button
                                 onClick={startGame}
@@ -188,10 +208,10 @@ export default function KnowledgeQuizGame({ isOpen, onClose }: KnowledgeQuizGame
 
                             {/* Explanation & Next Button */}
                             {isAnswered && (
-                                <div className="animate-fade-in-up">
+                                <div ref={feedbackRef} className="animate-fade-in-up">
                                     <div className={`p-4 rounded-xl mb-4 ${selectedOption === currentQuestion.correctIndex
-                                            ? "bg-green-50 border border-green-200 text-green-900"
-                                            : "bg-red-50 border border-red-200 text-red-900"
+                                        ? "bg-green-50 border border-green-200 text-green-900"
+                                        : "bg-red-50 border border-red-200 text-red-900"
                                         }`}>
                                         <div className="flex items-center gap-2 mb-1 font-bold">
                                             <span className="material-symbols-outlined">

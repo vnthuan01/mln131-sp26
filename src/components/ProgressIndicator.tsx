@@ -85,18 +85,22 @@ export default function ProgressIndicator({
 
                             {/* Label */}
                             <div
-                                className={`absolute left-10 w-max max-w-[200px] rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ${isActive
-                                    ? "bg-[#ee2b2b] text-white opacity-340 translate-x-0 shadow-lg shadow-[#ee2b2b]/10 "
-                                    : "bg-white text-gray-600 opacity-0 -translate-x-4 shadow-soft group-hover:opacity-100 group-hover:translate-x-0 "
-                                    }`}
+                                className={`absolute left-10 w-max max-w-[200px] rounded-lg px-3 py-2 text-sm font-medium
+    transition-all duration-300
+    opacity-0 -translate-x-4
+    group-hover:opacity-100 group-hover:translate-x-0
+    ${isActive ? "bg-[#ee2b2b] text-white shadow-lg shadow-[#ee2b2b]/10" : "bg-white text-gray-600 shadow-soft"}
+  `}
                             >
                                 {title}
-                                {/* Arrow pointer */}
+
                                 <div
-                                    className={`absolute top-1/2 -left-1 -mt-1 h-2 w-2 -rotate-45 transform ${isActive ? "bg-[#ee2b2b]" : "bg-white"
-                                        }`}
-                                ></div>
+                                    className={`absolute top-1/2 -left-1 -mt-1 h-2 w-2 -rotate-45
+      ${isActive ? "bg-[#ee2b2b]" : "bg-white"}
+    `}
+                                />
                             </div>
+
                         </div>
                     );
                 })}

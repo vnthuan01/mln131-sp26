@@ -98,11 +98,7 @@ export default function PuzzleGame({ isOpen, onClose }: PuzzleGameProps) {
         return { row, col };
     };
 
-    // Get background position for image tile
-    const getTileBackgroundPosition = (correctPosition: number) => {
-        const { row, col } = getTileGridPosition(correctPosition);
-        return `${col * 50}% ${row * 50}%`;
-    };
+
 
     const currentImage = puzzleGameContent.images[currentImageIndex];
     const completionMessage = puzzleGameContent.completionMessages[currentImageIndex];
@@ -111,7 +107,7 @@ export default function PuzzleGame({ isOpen, onClose }: PuzzleGameProps) {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in-up">
-            <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-2xl shadow-2xl w-full max-h-[90vh] overflow-y-auto max-w-2xl md:max-w-6xl transition-all duration-300">
                 {/* Header */}
                 <div className="p-6 border-b border-gray-100">
                     <div className="flex items-center justify-between">
@@ -141,117 +137,133 @@ export default function PuzzleGame({ isOpen, onClose }: PuzzleGameProps) {
                     </div>
                 </div>
 
-                {/* Game Content */}
                 <div className="p-6">
                     {!isCompleted ? (
-                        <>
-                            {/* Instructions */}
-                            <div className="flex items-center gap-2 mb-4 p-3 bg-blue-50 rounded-lg">
-                                <span className="material-symbols-outlined text-blue-600 text-sm">
-                                    info
-                                </span>
-                                <p className="text-sm text-blue-800">
-                                    Nhấp vào hai ô để hoán đổi vị trí. Ghép đúng hình ảnh để hoàn thành!
-                                </p>
-                            </div>
+                        <div className="flex flex-col md:flex-row gap-8">
+                            {/* Left Side: Puzzle Grid */}
+                            <div className="flex-1">
+                                <div className="relative aspect-square bg-gray-100 rounded-xl overflow-hidden shadow-inner">
+                                    <div className="grid grid-cols-3 gap-1 h-full p-1">
+                                        {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((position) => {
+                                            const tile = tiles.find((t) => t.currentPosition === position);
+                                            if (!tile) return null;
 
-                            {/* Stats */}
-                            <div className="flex justify-between mb-4">
-                                <div className="flex items-center gap-2">
-                                    <span className="material-symbols-outlined text-[#ee2b2b]">
-                                        swap_horiz
-                                    </span>
-                                    <span className="text-sm font-medium text-[#181111]">
-                                        Số lần di chuyển: <strong>{moves}</strong>
-                                    </span>
-                                </div>
-                                <button
-                                    onClick={initializePuzzle}
-                                    className="flex items-center gap-1 text-sm text-[#896161] hover:text-[#ee2b2b] transition-colors"
-                                >
-                                    <span className="material-symbols-outlined text-sm">
-                                        restart_alt
-                                    </span>
-                                    Chơi lại
-                                </button>
-                                <button
-                                    onClick={() => {
-                                        setCurrentImageIndex((prev) => (prev + 1) % puzzleGameContent.images.length);
-                                        setTimeout(initializePuzzle, 0);
-                                    }}
-                                    className="flex items-center gap-1 text-sm text-[#896161] hover:text-[#ee2b2b] transition-colors ml-4"
-                                >
-                                    <span className="material-symbols-outlined text-sm">
-                                        skip_next
-                                    </span>
-                                    Ảnh khác
-                                </button>
-                            </div>
+                                            const isSelected = selectedTile === tile.id;
+                                            const isCorrect = tile.currentPosition === tile.correctPosition;
 
-                            {/* Puzzle Grid */}
-                            <div className="relative aspect-square bg-gray-100 rounded-xl overflow-hidden">
-                                <div className="grid grid-cols-3 gap-1 h-full p-1">
-                                    {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((position) => {
-                                        const tile = tiles.find((t) => t.currentPosition === position);
-                                        if (!tile) return null;
-
-                                        const isSelected = selectedTile === tile.id;
-                                        const isCorrect = tile.currentPosition === tile.correctPosition;
-
-                                        return (
-                                            <button
-                                                key={position}
-                                                onClick={() => handleTileClick(tile.id)}
-                                                className={`relative overflow-hidden rounded-lg transition-all ${isSelected
-                                                    ? "ring-4 ring-[#ee2b2b] scale-95"
-                                                    : isCorrect
-                                                        ? "ring-2 ring-green-500"
-                                                        : "hover:scale-98"
-                                                    }`}
-                                                style={{
-                                                    backgroundImage: `url(${currentImage.src})`,
-                                                    backgroundSize: "300%",
-                                                    backgroundPosition: getTileBackgroundPosition(
-                                                        tile.correctPosition
-                                                    ),
-                                                }}
-                                            >
-                                                {/* Tile Number Overlay */}
-                                                <div
-                                                    className={`absolute inset-0 flex items-center justify-center ${isSelected
-                                                        ? "bg-[#ee2b2b]/30"
-                                                        : "bg-black/10 hover:bg-black/5"
-                                                        } transition-colors`}
+                                            return (
+                                                <button
+                                                    key={position}
+                                                    onClick={() => handleTileClick(tile.id)}
+                                                    className={`relative overflow-hidden rounded-lg transition-all ${isSelected
+                                                        ? "ring-4 ring-[#ee2b2b] scale-95 z-10"
+                                                        : isCorrect
+                                                            ? "ring-2 ring-green-500 z-0"
+                                                            : "hover:scale-98 z-0"
+                                                        }`}
                                                 >
-                                                    {isSelected && (
-                                                        <span className="material-symbols-outlined text-white text-2xl">
-                                                            touch_app
-                                                        </span>
-                                                    )}
-                                                </div>
-                                            </button>
-                                        );
-                                    })}
+                                                    <div
+                                                        className="absolute inset-0 pointer-events-none"
+                                                        style={{
+                                                            width: "300%",
+                                                            height: "300%",
+                                                            left: `-${(tile.correctPosition % 3) * 100}%`,
+                                                            top: `-${Math.floor(tile.correctPosition / 3) * 100}%`,
+                                                        }}
+                                                    >
+                                                        <img
+                                                            src={currentImage.src}
+                                                            alt=""
+                                                            className="w-full h-full object-cover max-w-none"
+                                                        />
+                                                    </div>
+                                                    {/* Tile Number Overlay */}
+                                                    <div
+                                                        className={`absolute inset-0 flex items-center justify-center ${isSelected
+                                                            ? "bg-[#ee2b2b]/30"
+                                                            : "bg-black/10 hover:bg-black/5"
+                                                            } transition-colors`}
+                                                    >
+                                                        {isSelected && (
+                                                            <span className="material-symbols-outlined text-white text-2xl">
+                                                                touch_app
+                                                            </span>
+                                                        )}
+                                                    </div>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* Preview */}
-                            <div className="mt-4 flex items-center gap-4">
-                                <div className="w-20 h-20 rounded-lg overflow-hidden border-2 border-gray-200">
-                                    <img
-                                        src={currentImage.src}
-                                        alt={currentImage.alt}
-                                        className="w-full h-full object-cover"
-                                    />
+                            {/* Right Side: Info & Controls */}
+                            <div className="w-full md:w-80 flex flex-col gap-4">
+                                {/* Instructions */}
+                                <div className="flex items-center gap-2 p-3 bg-blue-50 rounded-lg">
+                                    <span className="material-symbols-outlined text-blue-600">
+                                        info
+                                    </span>
+                                    <p className="text-sm text-blue-800">
+                                        Nhấp vào hai ô để hoán đổi vị trí. Ghép đúng hình ảnh để hoàn thành!
+                                    </p>
                                 </div>
-                                <div className="flex-1">
-                                    <span className="text-xs font-bold text-[#896161] uppercase tracking-wider">
+
+                                {/* Stats */}
+                                <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="flex items-center gap-2">
+                                            <span className="material-symbols-outlined text-[#ee2b2b]">
+                                                swap_horiz
+                                            </span>
+                                            <span className="text-sm font-medium text-[#181111]">
+                                                Số lần di chuyển
+                                            </span>
+                                        </div>
+                                        <span className="text-xl font-bold text-[#ee2b2b]">{moves}</span>
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-2">
+                                        <button
+                                            onClick={initializePuzzle}
+                                            className="flex items-center justify-center gap-1 px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-[#896161] hover:text-[#ee2b2b] hover:border-[#ee2b2b] transition-all"
+                                        >
+                                            <span className="material-symbols-outlined text-sm">
+                                                restart_alt
+                                            </span>
+                                            Chơi lại
+                                        </button>
+                                        <button
+                                            onClick={() => {
+                                                setCurrentImageIndex((prev) => (prev + 1) % puzzleGameContent.images.length);
+                                                setTimeout(initializePuzzle, 0);
+                                            }}
+                                            className="flex items-center justify-center gap-1 px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm text-[#896161] hover:text-[#ee2b2b] hover:border-[#ee2b2b] transition-all"
+                                        >
+                                            <span className="material-symbols-outlined text-sm">
+                                                skip_next
+                                            </span>
+                                            Ảnh khác
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Preview */}
+                                <div className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex-1 flex flex-col">
+                                    <span className="text-xs font-bold text-[#896161] uppercase tracking-wider mb-2">
                                         Hình mẫu
                                     </span>
-                                    <p className="text-sm text-[#181111]">{currentImage.alt}</p>
+                                    <div className="w-full aspect-video rounded-lg overflow-hidden border border-gray-100 mb-2">
+                                        <img
+                                            src={currentImage.src}
+                                            alt={currentImage.alt}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                    <p className="text-sm text-[#181111] font-medium text-center">{currentImage.alt}</p>
                                 </div>
                             </div>
-                        </>
+                        </div>
                     ) : (
                         /* Completion State */
                         <div className="text-center py-8">
@@ -272,7 +284,7 @@ export default function PuzzleGame({ isOpen, onClose }: PuzzleGameProps) {
                                 <img
                                     src={currentImage.src}
                                     alt={currentImage.alt}
-                                    className="w-full h-48 object-cover"
+                                    className="w-full h-full object-cover"
                                 />
                             </div>
 
@@ -306,8 +318,11 @@ export default function PuzzleGame({ isOpen, onClose }: PuzzleGameProps) {
                                     Chơi lại
                                 </button>
                                 <button
-                                    onClick={onClose}
-                                    className="flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-200 text-[#181111] font-bold hover:bg-gray-50 transition-colors"
+                                    onClick={() => {
+                                        setCurrentImageIndex((prev) => (prev + 1) % puzzleGameContent.images.length);
+                                        setTimeout(initializePuzzle, 0);
+                                    }}
+                                    className="flex items-center gap-2 px-6 py-3 rounded-lg border border-gray-200 text-[#181111] font-bold hover:bg-gray-50 transition-colors cursor-pointer"
                                 >
                                     Tiếp tục học
                                 </button>
