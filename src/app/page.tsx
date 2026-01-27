@@ -11,6 +11,7 @@ import KnowledgeQuizGame from "@/components/KnowledgeQuizGame";
 import MatchConceptsGame from "@/components/MatchConceptsGame";
 import GameSelectionModal from "@/components/GameSelectionModal";
 import { sections, introContent, conclusionContent } from "@/lib/content";
+import FlashcardSection from "@/components/FlashcardSection";
 
 export default function Home() {
   const [isGameSelectionOpen, setIsGameSelectionOpen] = useState(false);
@@ -95,6 +96,9 @@ export default function Home() {
             index={index}
           />
         ))}
+
+        {/* Flashcard Section - New dedicated section */}
+        <FlashcardSection />
 
         {/* Conclusion */}
         <section className="py-16 bg-gradient-to-b from-[#f8f6f6] to-white">
@@ -182,7 +186,7 @@ export default function Home() {
                   Ghép Hình Tri Thức
                 </h3>
                 <p className="text-[#896161] text-sm mb-6">
-                  Ghép các mảnh hình ảnh về văn hóa dân tộc và tôn giáo để khám phá kiến thức mới.
+                  Ghép các mảnh hình ảnh về văn hóa dân tộc và tôn giáo.
                 </p>
                 <button
                   onClick={() => setIsPuzzleOpen(true)}

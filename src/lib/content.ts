@@ -546,6 +546,90 @@ export const matchConceptsGameContent = {
     ]
 };
 
+// Flashcard Game Content
+export const flashcardsContent = {
+    title: "Thẻ Ghi Nhớ",
+    subtitle: "Ôn tập kiến thức cốt lõi qua thẻ ghi nhớ thông minh",
+    decks: [
+        {
+            id: "khai-niem",
+            title: "Khái niệm trắc nghiệm",
+            cards: [
+                {
+                    id: 1,
+                    term: "Dân tộc (theo Mác-Lênin)",
+                    definition: "Cộng đồng người ổn định, hình thành trong lịch sử, có chung lãnh thổ, ngôn ngữ, kinh tế, văn hóa và tâm lý tộc người."
+                },
+                {
+                    id: 2,
+                    term: "5 Đặc trưng của dân tộc",
+                    definition: "1. Chung lãnh thổ\n2. Chung ngôn ngữ\n3. Chung đời sống kinh tế\n4. Chung văn hóa và tâm lý\n5. Có ý thức tự giác dân tộc"
+                },
+                {
+                    id: 3,
+                    term: "Quyền bình đẳng dân tộc",
+                    definition: "Các dân tộc hoàn toàn ngang quyền nhau, không phân biệt lớn nhỏ, trình độ phát triển cao thấp. Không có đặc quyền hay đặc lợi."
+                },
+                {
+                    id: 4,
+                    term: "Quyền tự quyết dân tộc",
+                    definition: "Quyền làm chủ vận mệnh của mỗi dân tộc: quyền tự lựa chọn chế độ chính trị, con đường phát triển và quyền phân lập hoặc liên hiệp."
+                },
+                {
+                    id: 5,
+                    term: "Liên hiệp công nhân",
+                    definition: "Sự đoàn kết giai cấp công nhân các dân tộc nhằm chống lại áp bức giai cấp và giải phóng dân tộc."
+                },
+                {
+                    id: 6,
+                    term: "Bản chất tôn giáo",
+                    definition: "Là hình thái ý thức xã hội, phản ánh hư ảo sức mạnh của tự nhiên và xã hội vào đầu óc con người."
+                },
+                {
+                    id: 7,
+                    term: "3 Nguồn gốc của tôn giáo",
+                    definition: "1. Nguồn gốc Tự nhiên & Kinh tế - Xã hội\n2. Nguồn gốc Nhận thức\n3. Nguồn gốc Tâm lý"
+                },
+                {
+                    id: 8,
+                    term: "3 Tính chất của tôn giáo",
+                    definition: "1. Tính lịch sử (ra đời, tồn tại và biến đổi)\n2. Tính quần chúng (nhu cầu tinh thần của đông đảo nhân dân)\n3. Tính chính trị (phản ánh lợi ích giai cấp)"
+                },
+                {
+                    id: 9,
+                    term: "Tín ngưỡng",
+                    definition: "Niềm tin của con người vào cái thiêng liêng, là nhu cầu tâm linh (thờ cúng tổ tiên, thờ mẫu...) nhưng chưa có hệ thống giáo lý, tổ chức chặt chẽ như tôn giáo."
+                },
+                {
+                    id: 10,
+                    term: "Mê tín dị đoan",
+                    definition: "Niềm tin mù quáng vào những điều nhảm nhí, thần bí, trái với lẽ tự nhiên và khoa học, thường gây hậu quả xấu."
+                },
+                {
+                    id: 11,
+                    term: "Chính sách tôn giáo VN",
+                    definition: "Tôn trọng tự do tín ngưỡng; Bình đẳng giữa các tôn giáo; Đoàn kết lương - giáo; Nghiêm cấm lợi dụng tôn giáo để chống phá."
+                },
+                {
+                    id: 12,
+                    term: "Phương châm sống đạo",
+                    definition: "\"Tốt đời, đẹp đạo\", \"Sống phúc âm trong lòng dân tộc\", đồng hành cùng dân tộc và phục vụ hạnh phúc của đồng bào."
+                },
+                {
+                    id: 13,
+                    term: "Đại đoàn kết dân tộc",
+                    definition: "Đường lối chiến lược của cách mạng Việt Nam, là nguồn sức mạnh, động lực chủ yếu và là nhân tố có ý nghĩa quyết định bảo đảm thắng lợi bền vững."
+                },
+                {
+                    id: 14,
+                    term: "Xu hướng tôn giáo hiện nay",
+                    definition: "Đa dạng hóa, thế tục hóa (gắn bó với đời sống xã hội) và tích cực tham gia các hoạt động nhân đạo, từ thiện, giáo dục."
+                }
+            ]
+        }
+    ]
+};
+
 // Navigation items
 export const navItems = [
     { label: "Trang chủ", href: "#hero" },
