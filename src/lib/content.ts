@@ -139,117 +139,130 @@ export const sections = [
     {
         id: "ton-giao",
         number: "III",
-        title: "Tôn Giáo Trong Thời Kỳ Quá Độ Lên CNXH",
+        title: "Quan điểm Mác – Lênin về Tôn Giáo",
         icon: "temple_buddhist",
         color: "amber",
         subsections: [
             {
-                title: "1. Nguồn gốc của tôn giáo",
-                content: "Theo Mác – Lênin, tôn giáo bắt nguồn từ:",
+                title: "1. Bản chất của tôn giáo",
+                content: "Tôn giáo là sự phản ánh hư ảo sức mạnh của tự nhiên và xã hội vào đầu óc con người.",
                 points: [
-                    "Sự bất lực của con người trước tự nhiên",
-                    "Áp bức xã hội, bất công giai cấp",
-                    "Nhu cầu tinh thần"
+                    "Về ý thức: Là sự phản ánh hư ảo, thần thánh hóa các lực lượng trần thế.",
+                    "Về thực thể: Là một tổ chức xã hội (có niềm tin, giáo lý, cơ sở thờ tự, cộng đồng tín đồ).",
+                    "Về nhân văn: Là hiện tượng văn hóa do con người sáng tạo ra, gửi gắm ước mơ về cuộc sống tốt đẹp."
                 ],
-                note: "Tôn giáo là một hình thái ý thức xã hội, phản ánh hiện thực một cách hư ảo."
+                note: "Cần phân biệt rõ: Tín ngưỡng (niềm tin thiêng liêng), Tôn giáo (có tổ chức) và Mê tín dị đoan (tin mù quáng gây hại)."
             },
             {
-                title: "2. Quan điểm cơ bản của chủ nghĩa Mác – Lênin",
+                title: "2. Nguồn gốc của tôn giáo",
+                content: "Tôn giáo không tự nhiên sinh ra mà hình thành từ 3 nguồn gốc chính:",
                 points: [
-                    "Tôn giáo tồn tại lâu dài trong thời kỳ quá độ",
-                    "Không thể xóa bỏ tôn giáo bằng mệnh lệnh hành chính",
-                    "Phải tôn trọng tự do tín ngưỡng",
-                    "Từng bước nâng cao đời sống vật chất – tinh thần"
-                ],
-                quote: "\"Không được xúc phạm đến niềm tin của quần chúng.\" - V.I. Lênin"
+                    "Tự nhiên, Kinh tế - Xã hội: Con người cảm thấy yếu đuối trước sức mạnh thiên nhiên và áp bức bất công xã hội.",
+                    "Nhận thức: Khi khoa học chưa giải thích được các hiện tượng, con người tìm đến tôn giáo.",
+                    "Tâm lý: Sự sợ hãi (ốm đau, rủi ro) hoặc mong muốn được bình an, che chở."
+                ]
             },
             {
-                title: "3. Chính sách tôn giáo của Việt Nam hiện nay",
+                title: "3. Tính chất của tôn giáo",
                 points: [
-                    "Tôn trọng và bảo đảm quyền tự do tín ngưỡng, tôn giáo",
-                    "Các tôn giáo hoạt động trong khuôn khổ pháp luật"
-                ],
-                content: "Phân biệt:",
-                distinction: [
-                    "Tôn giáo chân chính",
-                    "Việc lợi dụng tôn giáo để chống phá Nhà nước"
-                ],
-                examples: [
-                    "Phật giáo, Công giáo, Tin Lành, Cao Đài… tham gia hoạt động từ thiện",
-                    "Bảo vệ môi trường",
-                    "Giáo dục đạo đức xã hội"
+                    "Tính lịch sử: Tôn giáo hình thành, biến đổi và phát triển theo lịch sử kinh tế - xã hội.",
+                    "Tính quần chúng: Là nơi sinh hoạt văn hóa của đông đảo người dân, phản ánh khát vọng nhân văn.",
+                    "Tính chính trị: Phản ánh lợi ích giai cấp (chỉ có trong xã hội có phân chia giai cấp)."
+                ]
+            },
+            {
+                title: "4. Thái độ của người Cộng sản",
+                points: [
+                    "Tôn trọng quyền tự do tín ngưỡng, tôn giáo.",
+                    "Không xem thường hay trấn áp nhu cầu tâm linh.",
+                    "Đoàn kết giữa người có đạo và không có đạo để xây dựng xã hội thực tại."
+                ]
+            },
+            {
+                title: "5. Các nguyên tắc giải quyết vấn đề tôn giáo",
+                content: "4 nguyên tắc 'vàng' trong thời kỳ quá độ:",
+                principles: [
+                    {
+                        title: "1. Tôn trọng tự do tín ngưỡng",
+                        description: "Theo đạo, đổi đạo hay không theo đạo là quyền tự do lựa chọn. Không được ép buộc hay cấm đoán."
+                    },
+                    {
+                        title: "2. Khắc phục tiêu cực gắn với xây dựng xã hội mới",
+                        description: "Nâng cao đời sống vật chất và dân trí để giảm bớt sự mê muội, ảo tưởng."
+                    },
+                    {
+                        title: "3. Phân biệt hai mặt Tôn giáo",
+                        description: "Mặt Tư tưởng (niềm tin - mâu thuẫn không đối kháng) và Mặt Chính trị (lợi dụng chống phá - mâu thuẫn đối kháng)."
+                    },
+                    {
+                        title: "4. Quan điểm lịch sử cụ thể",
+                        description: "Ứng xử linh hoạt, phù hợp với sự biến đổi của tôn giáo trong từng giai đoạn lịch sử."
+                    }
                 ]
             }
         ],
         quiz: {
-            question: "Theo quan điểm Mác - Lênin, tôn giáo là gì?",
+            question: "Nguyên tắc nào sau đây KHÔNG thuộc quan điểm Mác - Lênin khi giải quyết vấn đề tôn giáo?",
             options: [
-                "Một hình thái ý thức xã hội",
-                "Một tổ chức chính trị",
-                "Một phong trào xã hội",
-                "Một hình thức giải trí"
+                "Tôn trọng tự do tín ngưỡng",
+                "Phân biệt mặt chính trị và tư tưởng",
+                "Dùng mệnh lệnh hành chính xóa bỏ tôn giáo",
+                "Quan điểm lịch sử cụ thể"
             ],
-            correctIndex: 0,
-            explanation: "Theo Mác – Lênin, tôn giáo là một hình thái ý thức xã hội, phản ánh hiện thực một cách hư ảo."
+            correctIndex: 2,
+            explanation: "Chủ nghĩa Mác - Lênin phản đối việc dùng mệnh lệnh hành chính để xóa bỏ tôn giáo, mà phải khắc phục nguồn gốc sinh ra nó bằng cách xây dựng xã hội mới."
         },
         tip: {
-            title: "Bạn có biết?",
-            content: "Việt Nam hiện có hơn 26 triệu tín đồ thuộc các tôn giáo khác nhau, chiếm khoảng 27% dân số cả nước."
+            title: "Từ khóa cần nhớ",
+            content: "Tự do (Lựa chọn) - Đời sống (Nâng cao) - Rạch ròi (Tư tưởng/Chính trị) - Linh hoạt (Lịch sử)."
         }
     },
     {
-        id: "song-tot-doi-dep-dao",
+        id: "ton-giao-viet-nam",
         number: "IV",
-        title: "\"Sống Tốt Đời, Đẹp Đạo\"",
-        icon: "volunteer_activism",
+        title: "Tôn Giáo Ở Việt Nam & Chính Sách",
+        icon: "volunteer_activism", // Reusing icon or could use 'stars' or 'policy'
         color: "green",
         subsections: [
             {
-                title: "1. \"Sống tốt đời\" là gì?",
+                title: "1. Đặc điểm tôn giáo ở Việt Nam",
                 points: [
-                    "Chấp hành pháp luật",
-                    "Lao động chân chính",
-                    "Đóng góp cho xã hội",
-                    "Yêu nước, đoàn kết dân tộc"
+                    "Quốc gia đa tôn giáo (43 tổ chức, 16 tôn giáo, gồm cả nội sinh và ngoại nhập).",
+                    "Sống hòa bình, đoàn kết, không có xung đột, chiến tranh tôn giáo.",
+                    "Tín đồ phần lớn là người lao động yêu nước, sống 'tốt đời, đẹp đạo'.",
+                    "Chức sắc tôn giáo có vai trò quan trọng và uy tín lớn.",
+                    "Có quan hệ quốc tế rộng rãi."
                 ]
             },
             {
-                title: "2. \"Đẹp đạo\" là gì?",
-                content: "Giữ gìn giáo lý tốt đẹp của tôn giáo, hướng con người tới:",
+                title: "2. Chính sách của Đảng và Nhà nước",
                 points: [
-                    "Nhân ái",
-                    "Vị tha",
-                    "Hướng thiện"
-                ]
-            },
-            {
-                title: "3. Ý nghĩa trong xã hội Việt Nam hiện nay",
-                content: "\"Sống tốt đời, đẹp đạo\" là:",
-                points: [
-                    "Người có đạo vừa là tín đồ tốt, vừa là công dân tốt",
-                    "Gắn đạo với đời, tôn giáo với dân tộc"
+                    "Tôn giáo là nhu cầu tinh thần tồn tại lâu dài.",
+                    "Đại đoàn kết dân tộc (đoàn kết lương - giáo, nghiêm cấm chia rẽ).",
+                    "Nội dung cốt lõi: Vận động quần chúng sống 'tốt đời, đẹp đạo'.",
+                    "Công tác tôn giáo là trách nhiệm của cả hệ thống chính trị.",
+                    "Tín đồ có quyền tự do tín ngưỡng nhưng phải tuân thủ Hiến pháp và pháp luật."
                 ],
                 examples: [
-                    "Giáo dân tham gia xây dựng nông thôn mới",
-                    "Sư thầy tham gia cứu trợ bão lũ",
-                    "Nhà thờ, chùa chiền là điểm tựa tinh thần và nhân đạo"
+                    "Nhà nước đầu tư điện, đường, trường, trạm vùng đồng bào có đạo.",
+                    "Các tổ chức tôn giáo tích cực tham gia từ thiện, y tế, giáo dục."
                 ]
             }
         ],
         quiz: {
-            question: "\"Sống tốt đời, đẹp đạo\" có ý nghĩa gì?",
+            question: "Đặc điểm nào nổi bật nhất về quan hệ giữa các tôn giáo ở Việt Nam?",
             options: [
-                "Chỉ cần sống theo đạo là đủ",
-                "Chỉ cần là công dân tốt",
-                "Vừa là tín đồ tốt, vừa là công dân tốt",
-                "Không liên quan đến đời sống xã hội"
+                "Thường xuyên xảy ra xung đột",
+                "Sống hòa bình, đan xen, không có chiến tranh tôn giáo",
+                "Tách biệt hoàn toàn về địa lý",
+                "Chỉ có một tôn giáo duy nhất hoạt động"
             ],
-            correctIndex: 2,
-            explanation: "\"Sống tốt đời, đẹp đạo\" nghĩa là người có đạo vừa là tín đồ tốt, vừa là công dân tốt, gắn đạo với đời, tôn giáo với dân tộc."
+            correctIndex: 1,
+            explanation: "Các tôn giáo ở Việt Nam chung sống hòa bình, đoàn kết, đan xen và chưa từng xảy ra chiến tranh tôn giáo."
         },
         tip: {
-            title: "Bạn có biết?",
-            content: "Nhiều cơ sở tôn giáo tại Việt Nam đã trở thành điểm tựa tinh thần và nhân đạo, tích cực tham gia các hoạt động từ thiện, cứu trợ thiên tai."
+            title: "Thực tế tại Việt Nam",
+            content: "Việt Nam được quốc tế đánh giá cao về sự đa dạng và hòa hợp tôn giáo, nơi các ngày lễ lớn như Giáng Sinh hay Lễ Phật Đản đều trở thành ngày vui chung của cộng đồng."
         }
     }
 ];

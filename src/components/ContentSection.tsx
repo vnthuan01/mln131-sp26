@@ -6,7 +6,7 @@ import EducationalTip from "./EducationalTip";
 interface Principle {
     title: string;
     description: string;
-    vietnam: string;
+    vietnam?: string;
 }
 
 interface Subsection {
@@ -148,14 +148,16 @@ export default function ContentSection({ section, index }: ContentSectionProps) 
                                                 <p className="text-[#181111]/80 text-sm mb-2">
                                                     {principle.description}
                                                 </p>
-                                                <div className="bg-white/50 rounded p-3 mt-2">
-                                                    <span className="text-xs font-bold text-[#896161] uppercase tracking-wider">
-                                                        📍 Thực tế Việt Nam:
-                                                    </span>
-                                                    <p className="text-sm text-[#181111]/80 mt-1">
-                                                        {principle.vietnam}
-                                                    </p>
-                                                </div>
+                                                {principle.vietnam && (
+                                                    <div className="bg-white/50 rounded p-3 mt-2">
+                                                        <span className="text-xs font-bold text-[#896161] uppercase tracking-wider">
+                                                            📍 Thực tế Việt Nam:
+                                                        </span>
+                                                        <p className="text-sm text-[#181111]/80 mt-1">
+                                                            {principle.vietnam}
+                                                        </p>
+                                                    </div>
+                                                )}
                                             </div>
                                         ))}
                                     </div>

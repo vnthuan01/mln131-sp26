@@ -37,7 +37,7 @@ export default function GameSelectionModal({
             <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose}></div>
 
             <div
-                className={`relative w-full max-w-4xl bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform transition-all duration-300 ${isOpen ? "scale-100 translate-y-0" : "scale-95 translate-y-4"}`}
+                className={`relative w-full max-w-4xl max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl p-6 md:p-8 transform transition-all duration-300 ${isOpen ? "scale-100 translate-y-0" : "scale-95 translate-y-4"}`}
             >
                 <div className="text-center mb-8">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#ee2b2b]/10 text-[#ee2b2b] text-xs font-bold uppercase tracking-wider mb-4">
