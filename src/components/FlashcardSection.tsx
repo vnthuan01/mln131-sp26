@@ -3,25 +3,19 @@
 import { useState, useEffect, useRef } from "react";
 import { flashcardsContent } from "@/lib/content";
 
-type Mode = "study" | "quiz";
-
 export default function FlashcardSection() {
     const [currentCardIndex, setCurrentCardIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
-    const [mode, setMode] = useState<Mode>("study");
-    const [quizOptions, setQuizOptions] = useState<string[]>([]);
-    const [quizAnswer, setQuizAnswer] = useState<string | null>(null);
-    const [score, setScore] = useState(0);
-    const [showQuizResult, setShowQuizResult] = useState(false);
     const [isListExpanded, setIsListExpanded] = useState(false);
+
+    // New state for Expanding Card (Mobile Optimization)
+    const [isCardExpanded, setIsCardExpanded] = useState(false);
 
     // Touch handling state
     const [touchStart, setTouchStart] = useState<number | null>(null);
     const [touchEnd, setTouchEnd] = useState<number | null>(null);
 
     const sectionRef = useRef<HTMLElement>(null);
-    const questionTitleRef = useRef<HTMLHeadingElement>(null);
-    const nextButtonRef = useRef<HTMLDivElement>(null);
 
     // Assuming we use the first deck for now
     const deck = flashcardsContent.decks[0];
@@ -38,16 +32,6 @@ export default function FlashcardSection() {
         setIsFlipped(false);
         setTimeout(() => {
             setCurrentCardIndex((prev) => (prev + 1) % cards.length);
-            setQuizAnswer(null);
-            setShowQuizResult(false);
-
-            // Scroll to title on next question
-            if (mode === 'quiz' && questionTitleRef.current) {
-                // Small delay to ensure render
-                setTimeout(() => {
-                    questionTitleRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, 100);
-            }
         }, 300);
     };
 
@@ -55,31 +39,35 @@ export default function FlashcardSection() {
         setIsFlipped(false);
         setTimeout(() => {
             setCurrentCardIndex((prev) => (prev - 1 + cards.length) % cards.length);
-            setQuizAnswer(null);
-            setShowQuizResult(false);
-
-            // Scroll to title on prev question (if in quiz mode)
-            if (mode === 'quiz' && questionTitleRef.current) {
-                setTimeout(() => {
-                    questionTitleRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }, 100);
-            }
         }, 300);
+    };
+
+    const toggleCardExpand = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setIsCardExpanded(!isCardExpanded);
     };
 
     // Keyboard Navigation
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            // Only handle keys if the section is in view or focused? 
-            // For simplicity, we check if the active element is within this component or just handle global if simpler, 
-            // but global might interfere with other scroll. 
-            // Let's add a check if the user is near this section? 
-            // Actually, user requested "keyboard navigate", usually implies global when the component is active.
-            // Since this is now on the page, we should be careful. 
-            // Let's rely on hover or just simple global listener but maybe guard it?
-            // For now, I'll keep it global but maybe we should rely on the user having interacted with it.
+            // If card is expanded, we always handle keys regardless of scroll position
+            if (isCardExpanded) {
+                if (e.key === "ArrowRight") {
+                    e.preventDefault();
+                    handleNext();
+                } else if (e.key === "ArrowLeft") {
+                    e.preventDefault();
+                    handlePrev();
+                } else if (e.key === " " || e.key === "Spacebar") {
+                    e.preventDefault();
+                    handleFlip();
+                } else if (e.key === "Escape") {
+                    setIsCardExpanded(false);
+                }
+                return;
+            }
 
-            // To be safe and not annoy users scrolling elsewhere, let's only capture if the section is somewhat visible.
+            // Normal mode: check visibility
             if (!sectionRef.current) return;
             const rect = sectionRef.current.getBoundingClientRect();
             const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
@@ -93,16 +81,14 @@ export default function FlashcardSection() {
                 e.preventDefault();
                 handlePrev();
             } else if (e.key === " " || e.key === "Spacebar") {
-                if (mode === "study") {
-                    e.preventDefault();
-                    handleFlip();
-                }
+                e.preventDefault();
+                handleFlip();
             }
         };
 
         window.addEventListener("keydown", handleKeyDown);
         return () => window.removeEventListener("keydown", handleKeyDown);
-    }, [mode, cards.length]);
+    }, [cards.length, isCardExpanded]); // Added isCardExpanded dependency
 
     // Touch Event Handlers
     const onTouchStart = (e: React.TouchEvent) => {
@@ -128,43 +114,6 @@ export default function FlashcardSection() {
         }
     };
 
-    // Generate quiz options
-    useEffect(() => {
-        if (mode === "quiz") {
-            const currentCard = cards[currentCardIndex];
-            const otherCards = cards.filter(c => c.id !== currentCard.id);
-            const randomDistractors = otherCards
-                .sort(() => 0.5 - Math.random())
-                .slice(0, 3)
-                .map(c => c.definition);
-
-            const options = [...randomDistractors, currentCard.definition]
-                .sort(() => 0.5 - Math.random());
-
-            setQuizOptions(options);
-            setQuizAnswer(null);
-            setShowQuizResult(false);
-        }
-    }, [currentCardIndex, mode, cards]);
-
-    const handleQuizOptionSelect = (selectedOption: string) => {
-        if (showQuizResult) return;
-
-        setQuizAnswer(selectedOption);
-        setShowQuizResult(true);
-
-        if (selectedOption === cards[currentCardIndex].definition) {
-            setScore(prev => prev + 1);
-        }
-
-        // Auto scroll to next button
-        setTimeout(() => {
-            if (nextButtonRef.current) {
-                nextButtonRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
-            }
-        }, 100);
-    };
-
     return (
         <section ref={sectionRef} id="flashcard-section" className="py-16 bg-gradient-to-br from-orange-50/50 to-yellow-50/30 border-y border-orange-100">
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,170 +132,139 @@ export default function FlashcardSection() {
                     </p>
                 </div>
 
-                {/* Game Interface */}
-                <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl shadow-orange-500/5 overflow-hidden border border-orange-100">
-
-                    {/* Toolbar */}
-                    <div className="px-6 py-4 bg-gray-50/80 border-b border-gray-100 flex flex-wrap gap-4 items-center justify-between">
-                        <div className="flex bg-white p-1 rounded-lg border border-gray-100 shadow-sm">
-                            <button
-                                onClick={() => setMode("study")}
-                                className={`px-4 py-1.5 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${mode === "study"
-                                    ? "bg-orange-50 text-orange-600"
-                                    : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-                                    }`}
-                            >
-                                <span className="material-symbols-outlined text-lg">school</span>
-                                Học tập
-                            </button>
-                            <button
-                                onClick={() => setMode("quiz")}
-                                className={`px-4 py-1.5 rounded-md text-sm font-bold transition-all flex items-center gap-2 ${mode === "quiz"
-                                    ? "bg-blue-50 text-blue-600"
-                                    : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-                                    }`}
-                            >
-                                <span className="material-symbols-outlined text-lg">quiz</span>
-                                Kiểm tra
-                            </button>
-                        </div>
-
-                        <div className="text-sm font-medium text-gray-500 flex items-center gap-4 ml-auto">
-                            <span>{currentCardIndex + 1} / {cards.length}</span>
-                            {mode === "quiz" && (
-                                <span className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-xs font-bold">
-                                    Điểm: {score}
-                                </span>
-                            )}
-                        </div>
-                    </div>
+                {/* Game Interface Container - Handles Expansion */}
+                <div
+                    className={`
+                        transition-all duration-300 ease-in-out
+                        ${isCardExpanded
+                            ? "fixed inset-0 z-50 flex flex-col items-center justify-center p-4 sm:p-8 bg-gray-900/95 backdrop-blur-sm"
+                            : "bg-white max-w-4xl mx-auto rounded-3xl shadow-xl shadow-orange-500/5 overflow-hidden border border-orange-100 relative"}
+                    `}
+                >
+                    {/* Expand/Close Button */}
+                    <button
+                        onClick={toggleCardExpand}
+                        className={`absolute top-2 right-2 z-50 p-2 flex items-center cursor-pointer rounded-full transition-colors
+                            ${isCardExpanded ? "bg-white/10 text-white hover:bg-white/20" : "bg-gray-100 text-gray-500 hover:bg-gray-200"}
+                        `}
+                        title={isCardExpanded ? "Thu nhỏ" : "Phóng to toàn màn hình"}
+                    >
+                        <span className="material-symbols-outlined">
+                            {isCardExpanded ? "close_fullscreen" : "open_in_full"}
+                        </span>
+                    </button>
 
                     {/* Main Interaction Area */}
                     <div
-                        className="p-6 md:p-12 min-h-[400px] flex flex-col items-center justify-center bg-[url('/grid-pattern.svg')] bg-fixed"
+                        className={`
+                            flex flex-col items-center justify-center w-full
+                            ${isCardExpanded ? "h-full max-w-5xl mx-auto" : "p-6 md:p-12 min-h-[400px] bg-[url('/grid-pattern.svg')] bg-fixed"}
+                        `}
                         onTouchStart={onTouchStart}
                         onTouchMove={onTouchMove}
                         onTouchEnd={onTouchEnd}
                     >
-                        {mode === "study" ? (
-                            <div className="w-full max-w-3xl mx-auto">
+                        {/* Toolbar (Only visible in normal mode for card count) */}
+                        {!isCardExpanded && (
+                            <div className="w-full flex justify-start mb-4 text-sm font-medium text-gray-500">
+                                <span>{currentCardIndex + 1} / {cards.length}</span>
+                            </div>
+                        )}
+
+                        {/* Card Container */}
+                        <div className={`w-full transition-all duration-300 ${isCardExpanded ? "h-[70vh] md:h-[80vh]" : "max-w-3xl aspect-[3/4] sm:aspect-[3/2] md:aspect-[2/1]"}`}>
+                            <div
+                                className="relative w-full h-full perspective-1000 cursor-pointer group mb-6 md:mb-10"
+                                onClick={handleFlip}
+                            >
                                 <div
-                                    className="relative w-full aspect-[16/9] md:aspect-[2/1] perspective-1000 cursor-pointer group mb-10"
-                                    onClick={handleFlip}
+                                    className={`absolute inset-0 w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? "rotate-y-neg-180" : ""
+                                        }`}
                                 >
-                                    <div
-                                        className={`absolute inset-0 w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? "rotate-y-neg-180" : ""
-                                            }`}
-                                    >
-                                        {/* Front */}
-                                        <div className="absolute inset-0 backface-hidden bg-white rounded-2xl shadow-lg border-2 border-orange-100 flex flex-col items-center justify-center p-8 z-[2]">
-                                            <div className="inline-block px-3 py-1 bg-orange-50 rounded-full text-xs font-bold text-orange-500 uppercase tracking-widest mb-6">
+                                    {/* Front */}
+                                    <div className="absolute inset-0 backface-hidden bg-white rounded-2xl shadow-lg border-2 border-orange-100 flex flex-col items-center justify-center p-6 md:p-10 z-[2]">
+                                        <div className="w-full h-full flex flex-col items-center justify-center overflow-y-auto custom-scrollbar">
+                                            <div className="inline-block px-3 py-1 bg-orange-50 rounded-full text-xs font-bold text-orange-500 uppercase tracking-widest mb-6 shrink-0">
                                                 {deck.title}
                                             </div>
-                                            <h3 className="text-2xl md:text-4xl font-bold text-[#181111] text-center leading-relaxed">
+                                            <h3 className={`font-bold text-[#181111] text-center leading-relaxed transition-all ${isCardExpanded ? "text-3xl md:text-5xl" : "text-2xl md:text-4xl"}`}>
                                                 {cards[currentCardIndex].term}
                                             </h3>
-                                            <div className="absolute bottom-6 text-sm text-gray-400 flex items-center gap-2 animate-pulse-subtle">
+                                            <div className="mt-8 text-sm text-gray-400 flex items-center gap-2 animate-pulse-subtle shrink-0">
                                                 <span className="material-symbols-outlined">touch_app</span>
                                                 {isFlipped ? "Chạm để xem thuật ngữ" : "Chạm để xem định nghĩa"}
                                             </div>
                                         </div>
+                                    </div>
 
-                                        {/* Back */}
-                                        <div className="absolute inset-0 backface-hidden rotate-y-neg-180 bg-orange-50 rounded-2xl shadow-lg border-2 border-orange-200 flex flex-col items-center justify-center p-8 z-[1]">
-                                            <div className="w-full h-full overflow-y-auto custom-scrollbar flex flex-col items-center justify-center text-center">
-                                                <div className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3">
-                                                    {cards[currentCardIndex].term}
-                                                </div>
-                                                <h4 className="text-sm font-bold text-orange-600 mb-4">ĐỊNH NGHĨA</h4>
-                                                <p className="text-xl md:text-2xl text-[#181111] leading-relaxed font-medium">
+                                    {/* Back */}
+                                    <div className="absolute inset-0 backface-hidden rotate-y-neg-180 bg-orange-50 rounded-2xl shadow-lg border-2 border-orange-200 flex flex-col items-center justify-center p-6 md:p-10 z-[1]">
+                                        <div className="w-full h-full overflow-y-auto custom-scrollbar flex flex-col items-center text-center">
+                                            <div className="text-xs font-bold text-orange-400 uppercase tracking-widest mb-3 shrink-0">
+                                                {cards[currentCardIndex].term}
+                                            </div>
+                                            <h4 className="text-sm font-bold text-orange-600 mb-4 shrink-0">ĐỊNH NGHĨA</h4>
+
+                                            {/* Scrollable Definition */}
+                                            <div className="flex-1 flex items-center justify-center w-full">
+                                                <p className={`text-[#181111] leading-relaxed font-medium whitespace-pre-line text-left w-full
+                                                    ${isCardExpanded ? "text-xl md:text-3xl px-4" : "text-xl md:text-2xl"}
+                                                `}>
                                                     {cards[currentCardIndex].definition}
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                {/* Controls */}
-                                <div className="flex justify-center items-center gap-8">
-                                    <button
-                                        onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-                                        className="h-14 w-14 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-500 hover:text-orange-600 hover:border-orange-200 hover:scale-110 transition-all group"
-                                    >
-                                        <span className="material-symbols-outlined text-3xl group-hover:animate-shake">arrow_back</span>
-                                    </button>
-
-                                    <div className="h-1.5 w-48 bg-gray-100 rounded-full overflow-hidden">
-                                        <div
-                                            className="h-full bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300"
-                                            style={{ width: `${((currentCardIndex + 1) / cards.length) * 100}%` }}
-                                        ></div>
-                                    </div>
-
-                                    <button
-                                        onClick={(e) => { e.stopPropagation(); handleNext(); }}
-                                        className="h-14 w-14 rounded-full bg-white shadow-lg border border-gray-100 flex items-center justify-center text-gray-500 hover:text-orange-600 hover:border-orange-200 hover:scale-110 transition-all group"
-                                    >
-                                        <span className="material-symbols-outlined text-3xl group-hover:animate-shake">arrow_forward</span>
-                                    </button>
-                                </div>
-
-                                <p className="text-center text-xs text-gray-400 mt-6 font-medium">
-                                    Mẹo: Dùng phím <kbd className="font-sans px-1.5 py-0.5 bg-gray-100 rounded border border-gray-300 mx-1">←</kbd> <kbd className="font-sans px-1.5 py-0.5 bg-gray-100 rounded border border-gray-300 mx-1">→</kbd> để chuyển thẻ, <kbd className="font-sans px-1.5 py-0.5 bg-gray-100 rounded border border-gray-300 mx-1">Space</kbd> để lật
-                                </p>
                             </div>
-                        ) : (
-                            <div className="w-full max-w-2xl mx-auto">
-                                <div className="bg-white rounded-2xl shadow-sm border border-orange-100 p-8 md:p-10 mb-8">
-                                    <h3
-                                        ref={questionTitleRef}
-                                        className="text-2xl font-bold text-[#181111] text-center mb-8 scroll-mt-24"
-                                    >
-                                        {cards[currentCardIndex].term} là gì?
-                                    </h3>
-                                    <div className="space-y-3">
-                                        {quizOptions.map((option, idx) => {
-                                            const isSelected = quizAnswer === option;
-                                            const isCorrect = option === cards[currentCardIndex].definition;
+                        </div>
 
-                                            let btnClass = "border-gray-200 hover:border-blue-400 hover:bg-blue-50";
-                                            if (showQuizResult) {
-                                                if (isCorrect) btnClass = "bg-green-50 border-green-500 text-green-700";
-                                                else if (isSelected) btnClass = "bg-red-50 border-red-500 text-red-700";
-                                                else btnClass = "opacity-50 border-gray-200";
-                                            } else if (isSelected) {
-                                                btnClass = "border-blue-500 bg-blue-50 text-blue-700 shadow-md";
-                                            }
+                        {/* Controls */}
+                        <div className={`flex justify-center items-center gap-8 mt-4 ${isCardExpanded ? "text-white" : ""}`}>
+                            <button
+                                onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+                                className={`h-14 w-14 rounded-full shadow-lg border flex items-center justify-center transition-all group
+                                    ${isCardExpanded
+                                        ? "bg-white/10 border-white/20 text-white hover:bg-white/20"
+                                        : "bg-white border-gray-100 text-gray-500 hover:text-orange-600 hover:border-orange-200 hover:scale-110"}
+                                `}
+                            >
+                                <span className="material-symbols-outlined text-3xl group-hover:animate-shake">arrow_back</span>
+                            </button>
 
-                                            return (
-                                                <button
-                                                    key={idx}
-                                                    onClick={() => handleQuizOptionSelect(option)}
-                                                    disabled={showQuizResult}
-                                                    className={`w-full p-5 rounded-xl border-2 text-left transition-all text-lg ${btnClass}`}
-                                                >
-                                                    {option}
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-
-                                    {showQuizResult && (
-                                        <div
-                                            ref={nextButtonRef}
-                                            className="mt-8 flex justify-center animate-fade-in-up scroll-mt-24"
-                                        >
-                                            <button
-                                                onClick={handleNext}
-                                                className="px-8 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 hover:shadow-lg transition-all flex items-center gap-2 transform active:scale-95"
-                                            >
-                                                Câu tiếp theo
-                                                <span className="material-symbols-outlined">arrow_forward</span>
-                                            </button>
-                                        </div>
-                                    )}
-                                </div>
+                            <div className={`h-1.5 w-48 rounded-full overflow-hidden ${isCardExpanded ? "bg-white/20" : "bg-gray-100"}`}>
+                                <div
+                                    className="h-full bg-gradient-to-r from-orange-400 to-red-500 transition-all duration-300"
+                                    style={{ width: `${((currentCardIndex + 1) / cards.length) * 100}%` }}
+                                ></div>
                             </div>
+
+                            <button
+                                onClick={(e) => { e.stopPropagation(); handleNext(); }}
+                                className={`h-14 w-14 rounded-full shadow-lg border flex items-center justify-center transition-all group
+                                    ${isCardExpanded
+                                        ? "bg-white/10 border-white/20 text-white hover:bg-white/20"
+                                        : "bg-white border-gray-100 text-gray-500 hover:text-orange-600 hover:border-orange-200 hover:scale-110"}
+                                `}
+                            >
+                                <span className="material-symbols-outlined text-3xl group-hover:animate-shake">arrow_forward</span>
+                            </button>
+                        </div>
+
+                        {!isCardExpanded && (
+                            <p className="text-center text-xs text-gray-400 mt-6 font-medium">
+                                Mẹo: Dùng phím <kbd className="font-sans px-1.5 py-0.5 bg-gray-100 rounded border border-gray-300 mx-1">←</kbd> <kbd className="font-sans px-1.5 py-0.5 bg-gray-100 rounded border border-gray-300 mx-1">→</kbd> để chuyển thẻ, <kbd className="font-sans px-1.5 py-0.5 bg-gray-100 rounded border border-gray-300 mx-1">Space</kbd> để lật thẻ
+                            </p>
+                        )}
+                        {isCardExpanded && (
+                            <p className="text-center text-xs text-white/50 mt-6 font-medium">
+                                Lướt trái phải hoặc nhấp vào mũi tên để chuyển thẻ
+                            </p>
+                        )}
+                        {isCardExpanded && (
+                            <p className="text-center text-xs text-white/50 mt-2 font-medium">
+                                Nhấn ESC hoặc nút thu nhỏ để thoát chế độ toàn màn hình
+                            </p>
                         )}
                     </div>
                 </div>
@@ -372,7 +290,7 @@ export default function FlashcardSection() {
                                 {cards.map((card) => (
                                     <div key={card.id} className="p-4 rounded-xl bg-gray-50 border border-gray-100 hover:bg-orange-50/50 hover:border-orange-100 transition-colors">
                                         <h4 className="font-bold text-[#181111] mb-2 text-lg">{card.term}</h4>
-                                        <p className="text-gray-600 leading-relaxed border-t border-gray-200 pt-2 mt-2">{card.definition}</p>
+                                        <p className="text-gray-600 leading-relaxed border-t border-gray-200 pt-2 mt-2 whitespace-pre-line">{card.definition}</p>
                                     </div>
                                 ))}
                             </div>
@@ -384,3 +302,9 @@ export default function FlashcardSection() {
         </section>
     );
 }
+
+// Ensure global styles for 3D transform exist if not already defined
+// .transform-style-3d { transform-style: preserve-3d; }
+// .backface-hidden { backface-visibility: hidden; }
+// .rotate-y-neg-180 { transform: rotateY(-180deg); }
+// .perspective-1000 { perspective: 1000px; }

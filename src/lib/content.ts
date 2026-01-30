@@ -37,107 +37,98 @@ export const sections = [
     {
         id: "dan-toc",
         number: "I",
-        title: "Dân Tộc Trong Thời Kỳ Quá Độ Lên CNXH",
+        title: "Quan điểm của Chủ nghĩa Mác – Lênin về Dân tộc",
         icon: "diversity_3",
         color: "primary",
         subsections: [
             {
                 title: "1. Khái niệm và đặc trưng cơ bản của dân tộc",
-                content: `Theo chủ nghĩa Mác – Lênin, dân tộc là một cộng đồng người ổn định, hình thành trong lịch sử, có 5 tiêu chí sau:`,
+                content: `Dân tộc là quá trình phát triển lâu dài của xã hội loài người (từ thị tộc, bộ lạc, bộ tộc đến dân tộc).`,
                 points: [
-                    "Chung lãnh thổ",
-                    "Chung ngôn ngữ",
-                    "Chung đời sống kinh tế",
-                    "Chung văn hóa và tâm lý dân tộc",
-                    "Có ý thức tự giác dân tộc"
-                ],
-                note: "Dân tộc không phải là khái niệm sinh học, mà là sản phẩm của lịch sử – xã hội.",
-                highlight: "Ở Việt Nam hiện nay: 54 dân tộc anh em cùng chung một quốc gia – một vận mệnh – một mục tiêu phát triển."
-            },
-            {
-                title: "2. Đặc trưng cơ bản của dân tộc",
-                content: "Dân tộc có ba đặc trưng cơ bản:",
-                points: [
-                    "Tính ổn định, bền vững - Dân tộc tồn tại lâu dài qua nhiều thế hệ (VD: Dân tộc Việt Nam hình thành và phát triển hàng nghìn năm)",
-                    "Cộng đồng lợi ích và vận mệnh - Các thành viên gắn bó với nhau trong lịch sử dựng nước và giữ nước",
-                    "Ý thức tự giác dân tộc - Nhận thức rõ bản sắc, quyền lợi và trách nhiệm với dân tộc mình"
+                    "Nghĩa rộng (Quốc gia dân tộc - Nation): Cộng đồng chính trị - xã hội có 5 đặc trưng: Chung phương thức sinh hoạt kinh tế; Chung lãnh thổ ổn định; Chung nhà nước quản lý; Chung ngôn ngữ; Chung tâm lý văn hóa.",
+                    "Nghĩa hẹp (Tộc người - Ethnies): Cộng đồng người hình thành lâu dài với 3 đặc trưng: Cộng đồng về ngôn ngữ; Cộng đồng về văn hóa; Ý thức tự giác tộc người (tiêu chí quan trọng nhất)."
                 ]
             },
             {
-                title: "3. Quan điểm của chủ nghĩa Mác – Lênin về vấn đề dân tộc",
-                content: "Lênin đưa ra ba nguyên tắc cơ bản:",
+                title: "2. Hai xu hướng khách quan của sự phát triển quan hệ dân tộc",
+                points: [
+                    "Xu hướng tách ra: Các cộng đồng dân cư muốn tách ra để thành lập các dân tộc độc lập (do thức tỉnh ý thức dân tộc).",
+                    "Xu hướng liên hiệp lại: Các dân tộc muốn xích lại gần nhau, xóa bỏ hàng rào ngăn cách (do phát triển kinh tế, khoa học và giao lưu)."
+                ]
+            },
+            {
+                title: "3. Cương lĩnh dân tộc của Chủ nghĩa Mác – Lênin",
+                content: "Gồm 3 nội dung chính:",
                 principles: [
                     {
                         title: "Các dân tộc hoàn toàn bình đẳng",
-                        description: "Không phân biệt dân tộc lớn – nhỏ. Không có dân tộc \"thượng đẳng\" hay \"hạ đẳng\".",
-                        vietnam: "Hiến pháp 2013 khẳng định: \"Các dân tộc bình đẳng, đoàn kết, tôn trọng và giúp nhau cùng phát triển\". Người dân tộc thiểu số được ưu tiên giáo dục, hỗ trợ y tế, phát triển hạ tầng."
+                        description: "Nghĩa vụ và quyền lợi ngang nhau, không dân tộc nào có đặc quyền áp bức dân tộc khác."
                     },
                     {
-                        title: "Các dân tộc có quyền tự quyết",
-                        description: "Quyền lựa chọn con đường phát triển. Quyền tách ra hay liên hiệp trên cơ sở tự nguyện.",
-                        vietnam: "Việt Nam vận dụng theo hướng: Tôn trọng quyền tự quyết, nhưng giữ vững độc lập – thống nhất quốc gia. Kiên quyết chống mọi âm mưu lợi dụng \"tự quyết\" để chia rẽ dân tộc."
+                        title: "Các dân tộc được quyền tự quyết",
+                        description: "Quyền tự quyết định vận mệnh, chế độ chính trị (tách ra hoặc liên hiệp lại) trên lập trường giai cấp công nhân."
                     },
                     {
-                        title: "Liên hiệp công nhân các dân tộc",
-                        description: "Đoàn kết giai cấp công nhân và nhân dân lao động các dân tộc. Chống chủ nghĩa dân tộc hẹp hòi, ly khai.",
-                        vietnam: "Mặt trận Tổ quốc Việt Nam là trung tâm đoàn kết các giai tầng, dân tộc."
+                        title: "Liên hiệp công nhân tất cả các dân tộc",
+                        description: "Nội dung chủ yếu, phản ánh sự thống nhất giữa giải phóng dân tộc và giải phóng giai cấp."
                     }
                 ]
             }
         ],
         quiz: {
-            question: "Theo quan điểm Mác - Lênin, dân tộc có bao nhiêu đặc trưng cơ bản?",
-            options: ["3 đặc trưng", "5 đặc trưng", "7 đặc trưng", "4 đặc trưng"],
-            correctIndex: 0,
-            explanation: "Theo chủ nghĩa Mác – Lênin, dân tộc có 3 đặc trưng cơ bản: chung lãnh thổ, chung ngôn ngữ, chung đời sống kinh tế, chung văn hóa và tâm lý dân tộc, và có ý thức tự giác dân tộc."
+            question: "Tiêu chí nào là quan trọng nhất để phân định tộc người (nghĩa hẹp)?",
+            options: ["Cộng đồng về ngôn ngữ", "Cộng đồng về văn hóa", "Ý thức tự giác tộc người", "Cộng đồng về kinh tế"],
+            correctIndex: 2,
+            explanation: "Ý thức tự giác tộc người là tiêu chí quan trọng nhất để phân định tộc người."
         },
         tip: {
-            title: "Bạn có biết?",
-            content: "Việt Nam có 54 dân tộc anh em, trong đó dân tộc Kinh chiếm đa số (khoảng 86%), các dân tộc thiểu số chiếm khoảng 14% dân số cả nước."
+            title: "Góc mở rộng",
+            content: "Xu hướng 'Liên hiệp lại' ngày nay thể hiện rõ qua các tổ chức như ASEAN, EU, nơi các quốc gia hợp tác cùng phát triển."
         }
     },
     {
-        id: "quan-he-dan-toc",
+        id: "dan-toc-viet-nam",
         number: "II",
-        title: "Quan Hệ Dân Tộc Ở Việt Nam",
-        icon: "handshake",
-        color: "blue",
+        title: "Dân tộc và Quan hệ dân tộc ở Việt Nam",
+        icon: "flag",
+        color: "red",
         subsections: [
             {
-                title: "1. Đặc điểm quan hệ dân tộc ở Việt Nam",
+                title: "1. Đặc điểm dân tộc Việt Nam",
                 points: [
-                    "Việt Nam có 54 dân tộc",
-                    "Dân tộc Kinh chiếm đa số, các dân tộc thiểu số sống xen kẽ",
-                    "Trình độ phát triển không đồng đều"
+                    "Chênh lệch về dân số (Kinh 85.7%, 53 dân tộc thiểu số 14.3%).",
+                    "Cư trú xen kẽ (không dân tộc nào cư trú duy nhất một địa bàn).",
+                    "Phân bố ở địa bàn chiến lược (biên giới, hải đảo, vùng sâu).",
+                    "Trình độ phát triển không đều (về kinh tế, văn hóa, xã hội).",
+                    "Truyền thống đoàn kết (gắn bó lâu đời trong dựng nước và giữ nước).",
+                    "Bản sắc văn hóa riêng (thống nhất trong đa dạng)."
                 ]
             },
             {
-                title: "2. Chính sách dân tộc của Đảng và Nhà nước",
+                title: "2. Quan điểm và chính sách dân tộc",
+                content: "Vấn đề dân tộc là chiến lược, cơ bản, lâu dài và cấp bách.",
                 points: [
-                    "Phát triển kinh tế – xã hội vùng dân tộc thiểu số",
-                    "Bảo tồn bản sắc văn hóa",
-                    "Đào tạo cán bộ người dân tộc"
-                ],
-                examples: [
-                    "Chương trình mục tiêu quốc gia phát triển kinh tế – xã hội vùng đồng bào dân tộc thiểu số (2021–2030)",
-                    "Đầu tư điện, đường, trường, trạm tại Tây Bắc, Tây Nguyên"
-                ],
-                highlight: "Mục tiêu: \"Không để ai bị bỏ lại phía sau\""
+                    "Chính trị: Bình đẳng, đoàn kết, nâng cao nhận thức.",
+                    "Kinh tế: Phát triển miền núi, xóa đói giảm nghèo.",
+                    "Văn hóa: Xây dựng văn hóa tiên tiến, đậm đà bản sắc.",
+                    "Xã hội: Đảm bảo an sinh, y tế, giáo dục.",
+                    "An ninh quốc phòng: Tăng cường quan hệ quân dân, bảo vệ biên giới."
+                ]
             }
         ],
         quiz: {
-            question: "Chương trình mục tiêu quốc gia phát triển kinh tế – xã hội vùng đồng bào dân tộc thiểu số có thời gian thực hiện là giai đoạn nào?",
-            options: ["2020-2025", "2021-2030", "2025-2035", "2020-2030"],
+            question: "Việt Nam có bao nhiêu dân tộc anh em?",
+            options: ["53", "54", "55", "63"],
             correctIndex: 1,
-            explanation: "Chương trình mục tiêu quốc gia phát triển kinh tế – xã hội vùng đồng bào dân tộc thiểu số và miền núi giai đoạn 2021-2030."
+            explanation: "Việt Nam có 54 dân tộc, trong đó dân tộc Kinh chiếm đa số."
         },
         tip: {
-            title: "Bạn có biết?",
-            content: "Chính sách \"4 điện, đường, trường, trạm\" đã giúp hàng triệu đồng bào dân tộc thiểu số tiếp cận được các dịch vụ cơ bản, góp phần xóa đói giảm nghèo hiệu quả."
+            title: "Thực tế",
+            content: "Các dân tộc thiểu số ở Việt Nam tuy số lượng ít nhưng cư trú ở những địa bàn có vị trí chiến lược cực kỳ quan trọng về an ninh, quốc phòng."
         }
     },
     {
-        id: "ton-giao",
+        id: "quan-diem-ton-giao",
         number: "III",
         title: "Quan điểm Mác – Lênin về Tôn Giáo",
         icon: "temple_buddhist",
@@ -145,92 +136,81 @@ export const sections = [
         subsections: [
             {
                 title: "1. Bản chất của tôn giáo",
-                content: "Tôn giáo là sự phản ánh hư ảo sức mạnh của tự nhiên và xã hội vào đầu óc con người.",
                 points: [
-                    "Về ý thức: Là sự phản ánh hư ảo, thần thánh hóa các lực lượng trần thế.",
-                    "Về thực thể: Là một tổ chức xã hội (có niềm tin, giáo lý, cơ sở thờ tự, cộng đồng tín đồ).",
-                    "Về nhân văn: Là hiện tượng văn hóa do con người sáng tạo ra, gửi gắm ước mơ về cuộc sống tốt đẹp."
-                ],
-                note: "Cần phân biệt rõ: Tín ngưỡng (niềm tin thiêng liêng), Tôn giáo (có tổ chức) và Mê tín dị đoan (tin mù quáng gây hại)."
+                    "Hình thái ý thức xã hội: Phản ánh hư ảo sức mạnh tự nhiên và xã hội.",
+                    "Thực thể xã hội: Có niềm tin, giáo thuyết, cơ sở thờ tự/chức sắc, và cộng đồng tín đồ.",
+                    "Bản chất nhân văn: Gửi gắm ước mơ về cuộc sống tốt đẹp hơn."
+                ]
             },
             {
                 title: "2. Nguồn gốc của tôn giáo",
-                content: "Tôn giáo không tự nhiên sinh ra mà hình thành từ 3 nguồn gốc chính:",
                 points: [
-                    "Tự nhiên, Kinh tế - Xã hội: Con người cảm thấy yếu đuối trước sức mạnh thiên nhiên và áp bức bất công xã hội.",
-                    "Nhận thức: Khi khoa học chưa giải thích được các hiện tượng, con người tìm đến tôn giáo.",
-                    "Tâm lý: Sự sợ hãi (ốm đau, rủi ro) hoặc mong muốn được bình an, che chở."
+                    "Tự nhiên, Kinh tế - Xã hội: Cảm thấy yếu đuối trước thiên nhiên và bất công xã hội.",
+                    "Nhận thức: Khoa học chưa giải thích được hết các hiện tượng.",
+                    "Tâm lý: Sự sợ hãi, mong muốn bình an, lòng biết ơn."
                 ]
             },
             {
                 title: "3. Tính chất của tôn giáo",
                 points: [
-                    "Tính lịch sử: Tôn giáo hình thành, biến đổi và phát triển theo lịch sử kinh tế - xã hội.",
-                    "Tính quần chúng: Là nơi sinh hoạt văn hóa của đông đảo người dân, phản ánh khát vọng nhân văn.",
-                    "Tính chính trị: Phản ánh lợi ích giai cấp (chỉ có trong xã hội có phân chia giai cấp)."
+                    "Tính lịch sử: Biến đổi theo điều kiện kinh tế - xã hội.",
+                    "Tính quần chúng: Nơi sinh hoạt văn hóa của số đông.",
+                    "Tính chính trị: Phản ánh lợi ích giai cấp (khi xã hội có giai cấp)."
                 ]
             },
             {
-                title: "4. Thái độ của người Cộng sản",
-                points: [
-                    "Tôn trọng quyền tự do tín ngưỡng, tôn giáo.",
-                    "Không xem thường hay trấn áp nhu cầu tâm linh.",
-                    "Đoàn kết giữa người có đạo và không có đạo để xây dựng xã hội thực tại."
-                ]
-            },
-            {
-                title: "5. Các nguyên tắc giải quyết vấn đề tôn giáo",
+                title: "4. Nguyên tắc giải quyết vấn đề tôn giáo",
                 content: "4 nguyên tắc 'vàng' trong thời kỳ quá độ:",
                 principles: [
                     {
-                        title: "1. Tôn trọng tự do tín ngưỡng",
-                        description: "Theo đạo, đổi đạo hay không theo đạo là quyền tự do lựa chọn. Không được ép buộc hay cấm đoán."
+                        title: "Tôn trọng tự do tín ngưỡng",
+                        description: "Quyền lựa chọn theo hoặc không theo đạo. Không ai được ép buộc hay cấm đoán."
                     },
                     {
-                        title: "2. Khắc phục tiêu cực gắn với xây dựng xã hội mới",
-                        description: "Nâng cao đời sống vật chất và dân trí để giảm bớt sự mê muội, ảo tưởng."
+                        title: "Khắc phục tiêu cực gắn với xây dựng xã hội mới",
+                        description: "Cải thiện đời sống, nâng cao dân trí để giảm bớt ảo tưởng."
                     },
                     {
-                        title: "3. Phân biệt hai mặt Tôn giáo",
-                        description: "Mặt Tư tưởng (niềm tin - mâu thuẫn không đối kháng) và Mặt Chính trị (lợi dụng chống phá - mâu thuẫn đối kháng)."
+                        title: "Phân biệt hai mặt Tôn giáo",
+                        description: "Mặt Tư tưởng (mâu thuẫn không đối kháng) và Mặt Chính trị (mâu thuẫn đối kháng - lợi dụng chống phá)."
                     },
                     {
-                        title: "4. Quan điểm lịch sử cụ thể",
-                        description: "Ứng xử linh hoạt, phù hợp với sự biến đổi của tôn giáo trong từng giai đoạn lịch sử."
+                        title: " Quan điểm lịch sử cụ thể",
+                        description: "Ứng xử linh hoạt theo từng giai đoạn lịch sử và vai trò của tôn giáo đó."
                     }
                 ]
             }
         ],
         quiz: {
-            question: "Nguyên tắc nào sau đây KHÔNG thuộc quan điểm Mác - Lênin khi giải quyết vấn đề tôn giáo?",
+            question: "Trong 4 nguyên tắc giải quyết vấn đề tôn giáo, nguyên tắc nào giúp tránh nhầm lẫn giữa nhu cầu tâm linh và sự lợi dụng của thế lực thù địch?",
             options: [
                 "Tôn trọng tự do tín ngưỡng",
-                "Phân biệt mặt chính trị và tư tưởng",
-                "Dùng mệnh lệnh hành chính xóa bỏ tôn giáo",
+                "Khắc phục tiêu cực",
+                "Phân biệt mặt Chính trị và mặt Tư tưởng",
                 "Quan điểm lịch sử cụ thể"
             ],
             correctIndex: 2,
-            explanation: "Chủ nghĩa Mác - Lênin phản đối việc dùng mệnh lệnh hành chính để xóa bỏ tôn giáo, mà phải khắc phục nguồn gốc sinh ra nó bằng cách xây dựng xã hội mới."
+            explanation: "Phân biệt mặt Chính trị (lợi dụng) và mặt Tư tưởng (niềm tin) là quan trọng nhất để xử lý đúng đắn."
         },
         tip: {
-            title: "Từ khóa cần nhớ",
-            content: "Tự do (Lựa chọn) - Đời sống (Nâng cao) - Rạch ròi (Tư tưởng/Chính trị) - Linh hoạt (Lịch sử)."
+            title: "Từ khóa",
+            content: "Tín ngưỡng là chuyện tâm hồn, lợi dụng là chuyện pháp luật. Rạch ròi hai mặt này là chìa khóa giải quyết vấn đề."
         }
     },
     {
         id: "ton-giao-viet-nam",
         number: "IV",
         title: "Tôn Giáo Ở Việt Nam & Chính Sách",
-        icon: "volunteer_activism", // Reusing icon or could use 'stars' or 'policy'
+        icon: "volunteer_activism",
         color: "green",
         subsections: [
             {
                 title: "1. Đặc điểm tôn giáo ở Việt Nam",
                 points: [
-                    "Quốc gia đa tôn giáo (43 tổ chức, 16 tôn giáo, gồm cả nội sinh và ngoại nhập).",
-                    "Sống hòa bình, đoàn kết, không có xung đột, chiến tranh tôn giáo.",
-                    "Tín đồ phần lớn là người lao động yêu nước, sống 'tốt đời, đẹp đạo'.",
-                    "Chức sắc tôn giáo có vai trò quan trọng và uy tín lớn.",
+                    "Quốc gia đa tôn giáo (43 tổ chức, 16 tôn giáo).",
+                    "Sống hòa bình, không xung đột chiến tranh tôn giáo.",
+                    "Tín đồ phần lớn là người lao động yêu nước.",
+                    "Chức sắc có vai trò quan trọng và uy tín.",
                     "Có quan hệ quốc tế rộng rãi."
                 ]
             },
@@ -238,31 +218,23 @@ export const sections = [
                 title: "2. Chính sách của Đảng và Nhà nước",
                 points: [
                     "Tôn giáo là nhu cầu tinh thần tồn tại lâu dài.",
-                    "Đại đoàn kết dân tộc (đoàn kết lương - giáo, nghiêm cấm chia rẽ).",
-                    "Nội dung cốt lõi: Vận động quần chúng sống 'tốt đời, đẹp đạo'.",
-                    "Công tác tôn giáo là trách nhiệm của cả hệ thống chính trị.",
-                    "Tín đồ có quyền tự do tín ngưỡng nhưng phải tuân thủ Hiến pháp và pháp luật."
+                    "Đại đoàn kết dân tộc (đoàn kết lương - giáo).",
+                    "Nội dung cốt lõi: Công tác vận động quần chúng ('tốt đời, đẹp đạo').",
+                    "Trách nhiệm của cả hệ thống chính trị.",
+                    "Quyền và nghĩa vụ: Tự do tín ngưỡng nhưng phải tuân thủ pháp luật."
                 ],
-                examples: [
-                    "Nhà nước đầu tư điện, đường, trường, trạm vùng đồng bào có đạo.",
-                    "Các tổ chức tôn giáo tích cực tham gia từ thiện, y tế, giáo dục."
-                ]
+                highlight: "Mục tiêu: Dân giàu, nước mạnh, dân chủ, công bằng, văn minh."
             }
         ],
         quiz: {
-            question: "Đặc điểm nào nổi bật nhất về quan hệ giữa các tôn giáo ở Việt Nam?",
-            options: [
-                "Thường xuyên xảy ra xung đột",
-                "Sống hòa bình, đan xen, không có chiến tranh tôn giáo",
-                "Tách biệt hoàn toàn về địa lý",
-                "Chỉ có một tôn giáo duy nhất hoạt động"
-            ],
-            correctIndex: 1,
-            explanation: "Các tôn giáo ở Việt Nam chung sống hòa bình, đoàn kết, đan xen và chưa từng xảy ra chiến tranh tôn giáo."
+            question: "Nội dung cốt lõi của công tác tôn giáo ở Việt Nam là gì?",
+            options: ["Quản lý hành chính", "Xây dựng cơ sở thờ tự", "Công tác vận động quần chúng", "Phát triển số lượng tín đồ"],
+            correctIndex: 2,
+            explanation: "Mục tiêu cốt lõi là vận động quần chúng để đồng bào có đạo sống 'tốt đời, đẹp đạo'."
         },
         tip: {
-            title: "Thực tế tại Việt Nam",
-            content: "Việt Nam được quốc tế đánh giá cao về sự đa dạng và hòa hợp tôn giáo, nơi các ngày lễ lớn như Giáng Sinh hay Lễ Phật Đản đều trở thành ngày vui chung của cộng đồng."
+            title: "Thực tiễn",
+            content: "Nhà nước đầu tư 'điện, đường, trường, trạm' tại vùng đồng bào có đạo không chỉ để phát triển kinh tế mà còn để bà con yên tâm tu hành."
         }
     }
 ];
@@ -271,10 +243,9 @@ export const conclusionContent = {
     title: "Kết Luận",
     content: `Việc giải quyết đúng đắn vấn đề dân tộc và tôn giáo trong thời kỳ quá độ lên chủ nghĩa xã hội có ý nghĩa chiến lược đối với sự ổn định và phát triển của đất nước.
 
-Việt Nam đã và đang vận dụng sáng tạo chủ nghĩa Mác – Lênin, kết hợp với tư tưởng Hồ Chí Minh, để xây dựng khối đại đoàn kết toàn dân tộc, bảo đảm tự do tín ngưỡng, phát huy các giá trị tích cực của tôn giáo vì mục tiêu "dân giàu, nước mạnh, dân chủ, công bằng, văn minh".`
+Việt Nam kiên quyết đảm bảo quyền tự do tín ngưỡng, củng cố khối đại đoàn kết toàn dân tộc, đồng thời đấu tranh ngăn chặn mọi âm mưu lợi dụng vấn đề dân tộc, tôn giáo để chống phá chế độ.`
 };
 
-// Puzzle game content
 export const puzzleGameContent = {
     title: "Ghép Hình Tri Thức",
     subtitle: "Hoàn thành bức tranh về đoàn kết dân tộc và hài hòa tôn giáo",
@@ -283,354 +254,305 @@ export const puzzleGameContent = {
             id: 1,
             src: "https://inkythuatso.com/uploads/thumbnails/800/2023/03/hinh-anh-bac-ho-doc-ban-tuyen-ngon-doc-lap-1-04-14-04-53.jpg",
             alt: "Bác Hồ đọc Tuyên ngôn độc lập",
-            message: "Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập, khai sinh nước Việt Nam Dân chủ Cộng hòa. Trích: INKYTHUATSO.COM"
+            message: "Chủ tịch Hồ Chí Minh đọc Tuyên ngôn Độc lập. Nước Việt Nam có quyền hưởng tự do và độc lập."
         },
         {
             id: 2,
             src: "https://th.bing.com/th/id/R.0960f5c8a24ace04cbd23a229abb7500?rik=JpBA5rZVxQl1Nw&pid=ImgRaw&r=0",
             alt: "Đại đoàn kết 54 dân tộc",
-            message: "54 dân tộc anh em đoàn kết, thống nhất cùng phát triển đất nước. Trích: SCR.VN"
+            message: "54 dân tộc anh em đoàn kết, thống nhất cùng phát triển đất nước."
         },
         {
             id: 3,
             src: "https://lahata.vn/files/news/2021/12/22/-111847.jpg",
             alt: "Giáng sinh tại Việt Nam",
-            message: "Không khí Giáng sinh tại Nhà thờ Lớn Hà Nội, thể hiện tự do tín ngưỡng. Trích: https://lahata.vn/van-hoa-le-giang-sinh-o-viet-nam-d20.html"
+            message: "Không khí Giáng sinh an lành, thể hiện tự do tín ngưỡng tại Việt Nam."
         },
         {
             id: 4,
             src: "https://tuyenquang.dcs.vn/Image/Large/2024101518442_148039.jpg",
             alt: "Thanh niên Việt Nam",
-            message: "Thế hệ trẻ Việt Nam tiếp bước cha anh xây dựng và bảo vệ Tổ quốc. Trích: https://tuyenquang.dcs.vn/"
+            message: "Thế hệ trẻ Việt Nam tiếp bước cha anh xây dựng và bảo vệ Tổ quốc."
         },
         {
             id: 5,
             src: "https://lochoa.locninh.binhphuoc.gov.vn/uploads/lochoa/news/2024_11/image_22.png",
             alt: "Ngày hội Đại đoàn kết",
-            message: "Ngày hội Đại đoàn kết toàn dân tộc ở khu dân cư. Trích: https://lochoa.locninh.binhphuoc.gov.vn/"
+            message: "Ngày hội Đại đoàn kết toàn dân tộc thắt chặt tình làng nghĩa xóm."
         },
         {
             id: 6,
             src: "https://img5.thuthuatphanmem.vn/uploads/2022/01/16/anh-chua-tam-chuc-nhin-tu-xa_031721487.jpg",
             alt: "Chùa Tam Chúc",
-            message: "Chùa Tam Chúc - Ngôi chùa lớn nhất thế giới tại Việt Nam. Trích: https://img5.thuthuatphanmem.vn/"
+            message: "Chùa Tam Chúc - Một biểu tượng của văn hóa Phật giáo Việt Nam hiện nay."
         }
     ],
     completionMessages: [
         {
             title: "Xuất sắc! 🎉",
             concept: "Độc lập - Tự do",
-            description: "Nước Việt Nam có quyền hưởng tự do và độc lập, và sự thật đã thành một nước tự do, độc lập."
+            description: "Quyền cơ bản của mọi dân tộc đã được khẳng định."
         },
         {
             title: "Tuyệt vời! 🌟",
             concept: "Đại đoàn kết",
-            description: "Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công."
+            description: "Sức mạnh vô địch để vượt qua mọi khó khăn."
         },
         {
             title: "Chúc mừng! 🎄",
             concept: "Tự do tín ngưỡng",
-            description: "Mọi người có quyền tự do tín ngưỡng, tôn giáo, theo hoặc không theo một tôn giáo nào."
+            description: "Mọi người đều được tôn trọng quyền tâm linh của mình."
         },
         {
             title: "Hoàn hảo! 💯",
             concept: "Thanh niên xung kích",
-            description: "Đâu cần thanh niên có, việc gì khó có thanh niên."
+            description: "Tương lai đất nước nằm trong tay thế hệ trẻ."
         },
         {
             title: "Rất tốt! 👏",
             concept: "Tình làng nghĩa xóm",
-            description: "Xây dựng khối đại đoàn kết từ cơ sở, thắt chặt tình làng nghĩa xóm."
+            description: "Gắn kết cộng đồng từ những điều giản dị nhất."
         },
         {
             title: "Tuyệt mỹ! 🛕",
             concept: "Văn hóa tâm linh",
-            description: "Phát huy các giá trị văn hóa, đạo đức tốt đẹp của các tôn giáo."
+            description: "Gìn giữ và phát huy các giá trị văn hóa tốt đẹp."
         }
     ]
 };
 
-// Knowledge Quiz Game Content
 export const knowledgeQuizGameContent = {
     title: "Đố Vui Kiến Thức",
-    subtitle: "Thử thách kiến thức của bạn về Dân tộc và Tôn giáo",
+    subtitle: "Thử thách hiểu biết của bạn về Dân tộc & Tôn giáo",
     questions: [
         {
             id: 1,
-            question: "Việt Nam có bao nhiêu dân tộc anh em?",
-            options: ["53 dân tộc", "54 dân tộc", "55 dân tộc", "63 dân tộc"],
-            correctIndex: 1,
-            explanation: "Việt Nam là quốc gia đa dân tộc với 54 dân tộc anh em cùng chung sống."
+            question: "Theo nghĩa rộng (Quốc gia dân tộc), dân tộc có bao nhiêu đặc trưng?",
+            options: ["3 đặc trưng", "4 đặc trưng", "5 đặc trưng", "6 đặc trưng"],
+            correctIndex: 2,
+            explanation: "5 đặc trưng: Chung kinh tế, chung lãnh thổ, chung nhà nước, chung ngôn ngữ, chung tâm lý văn hóa."
         },
         {
             id: 2,
-            question: "Dân tộc nào chiếm đa số trong cộng đồng các dân tộc Việt Nam?",
-            options: ["Dân tộc Tày", "Dân tộc Thái", "Dân tộc Kinh", "Dân tộc Mường"],
+            question: "Tiêu chí quan trọng nhất để phân định tộc người (nghĩa hẹp) là gì?",
+            options: ["Ngôn ngữ chung", "Lãnh thổ chung", "Ý thức tự giác tộc người", "Văn hóa chung"],
             correctIndex: 2,
-            explanation: "Dân tộc Kinh (Việt) chiếm đa số, khoảng 86% dân số cả nước."
+            explanation: "Ý thức tự giác tộc người là tiêu chí quan trọng nhất."
         },
         {
             id: 3,
-            question: "Quan điểm 'Tôn trọng và bảo đảm quyền tự do tín ngưỡng, tôn giáo' là của ai?",
-            options: ["Đảng và Nhà nước ta", "Các tổ chức tôn giáo", "Liên hợp quốc", "Riêng Chủ tịch Hồ Chí Minh"],
-            correctIndex: 0,
-            explanation: "Đây là chính sách nhất quán của Đảng và Nhà nước Việt Nam về tôn giáo."
+            question: "Cương lĩnh dân tộc của Lênin gồm 3 nội dung, ngoại trừ:",
+            options: ["Các dân tộc hoàn toàn bình đẳng", "Các dân tộc được quyền tự quyết", "Liên hiệp công nhân tất cả các dân tộc", "Các dân tộc phải đồng hóa văn hóa"],
+            correctIndex: 3,
+            explanation: "Đồng hóa không phải là quan điểm của Lênin. Ba nội dung là: Bình đẳng, Tự quyết, Liên hiệp công nhân."
         },
         {
             id: 4,
-            question: "Điền vào chỗ trống: 'Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, ...'",
-            options: ["đại thắng lợi", "đại thành công", "đại vinh quang", "đại hạnh phúc"],
+            question: "Việt Nam có bao nhiêu dân tộc thiểu số?",
+            options: ["54", "53", "50", "43"],
             correctIndex: 1,
-            explanation: "Câu nói nổi tiếng của Chủ tịch Hồ Chí Minh: 'Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công.'"
+            explanation: "Có 54 dân tộc anh em, trừ đi dân tộc Kinh chiếm đa số, còn lại 53 dân tộc thiểu số."
         },
         {
             id: 5,
-            question: "Mặt trận Tổ quốc Việt Nam có vai trò gì trong khối đại đoàn kết?",
-            options: ["Lãnh đạo tuyệt đối", "Tổ chức sản xuất", "Trung tâm tập hợp và đoàn kết", "Quản lý hành chính"],
+            question: "Nguyên tắc 'Vàng' nào giúp tránh nhầm lẫn khi xử lý vấn đề tôn giáo?",
+            options: ["Tôn trọng tự do", "Khắc phục tiêu cực", "Phân biệt mặt Chính trị và Tư tưởng", "Quan điểm lịch sử"],
             correctIndex: 2,
-            explanation: "Mặt trận Tổ quốc Việt Nam là tổ chức liên minh chính trị, liên hiệp tự nguyện, là trung tâm tập hợp và xây dựng khối đại đoàn kết toàn dân tộc."
+            explanation: "Phân biệt Chính trị (lợi dụng - đối kháng) và Tư tưởng (niềm tin - không đối kháng) là cốt lõi."
         },
         {
             id: 6,
-            question: "Theo quan điểm Mác - Lênin, giải quyết vấn đề dân tộc được xem là?",
-            options: ["Mục tiêu chiến lược", "Nhiệm vụ trước mắt", "Vấn đề phụ", "Không quan trọng"],
-            correctIndex: 0,
-            explanation: "Vấn đề dân tộc là vấn đề chiến lược của cách mạng xã hội chủ nghĩa."
+            question: "Mặt Chính trị của tôn giáo là mâu thuẫn gì?",
+            options: ["Mâu thuẫn nội bộ", "Mâu thuẫn không đối kháng", "Mâu thuẫn đối kháng", "Mâu thuẫn văn hóa"],
+            correctIndex: 2,
+            explanation: "Mặt Chính trị phản ánh sự lợi dụng tôn giáo để chống phá, là mâu thuẫn đối kháng."
         },
         {
             id: 7,
-            question: "Nội dung cốt lõi của công tác tôn giáo là gì?",
-            options: ["Vận động quần chúng", "Quản lý hành chính", "Xây dựng cơ sở thờ tự", "Đào tạo chức sắc"],
-            correctIndex: 0,
-            explanation: "Nội dung cốt lõi của công tác tôn giáo là công tác vận động quần chúng."
+            question: "Việt Nam có đặc điểm gì về tôn giáo?",
+            options: ["Đơn tôn giáo", "Xung đột triền miên", "Đa tôn giáo, sống hòa bình", "Không có tôn giáo"],
+            correctIndex: 2,
+            explanation: "Việt Nam là quốc gia đa tôn giáo, các tôn giáo sống hòa bình, đoàn kết."
         },
         {
             id: 8,
-            question: "Tôn giáo có mấy đặc điểm chính?",
-            options: ["2 đặc điểm", "3 đặc điểm", "4 đặc điểm", "5 đặc điểm"],
+            question: "Chính sách của Nhà nước ta coi tôn giáo là?",
+            options: ["Thuốc phiện của nhân dân", "Nhu cầu tinh thần tồn tại lâu dài", "Đối tượng cần xóa bỏ ngay", "Mê tín dị đoan"],
             correctIndex: 1,
-            explanation: "Tôn giáo có 3 đặc điểm: tính lịch sử, tính quần chúng, và tính chính trị."
+            explanation: "Đảng và Nhà nước ta xác định tôn giáo là nhu cầu tinh thần của một bộ phận nhân dân, tồn tại lâu dài."
         },
         {
             id: 9,
-            question: "'Tốt đời đẹp đạo' là phương châm sống của?",
-            options: ["Người dân tộc thiểu số", "Đồng bào các tôn giáo", "Cán bộ công chức", "Doanh nhân"],
+            question: "Nội dung cốt lõi của công tác tôn giáo là gì?",
+            options: ["Xây dựng chùa chiền", "Vận động quần chúng", "Đào tạo chức sắc", "Phát triển kinh tế"],
             correctIndex: 1,
-            explanation: "'Sống tốt đời, đẹp đạo' là phương châm sống tích cực của đồng bào các tôn giáo tại Việt Nam."
+            explanation: "Công tác vận động quần chúng sống 'tốt đời, đẹp đạo' là cốt lõi."
         },
         {
             id: 10,
-            question: "Nguyên tắc cơ bản trong quan hệ giữa các dân tộc ở Việt Nam là?",
-            options: ["Bình đẳng, đoàn kết, tôn trọng, giúp nhau cùng phát triển", "Cạnh tranh lành mạnh", "Tự trị hoàn toàn", "Phân chia khu vực"],
-            correctIndex: 0,
-            explanation: "Nguyên tắc Hiến định: 'Các dân tộc bình đẳng, đoàn kết, tôn trọng và giúp nhau cùng phát triển'."
+            question: "Đặc điểm cư trú của các dân tộc ở Việt Nam là?",
+            options: ["Cư trú tập trung", "Tách biệt hoàn toàn", "Cư trú xen kẽ", "Phân chia Bắc - Nam rõ rệt"],
+            correctIndex: 2,
+            explanation: "Các dân tộc ở Việt Nam cư trú xen kẽ nhau, không dân tộc nào cư trú duy nhất một địa bàn."
         },
         {
             id: 11,
-            question: "Chủ nghĩa Mác - Lênin khẳng định vấn đề dân tộc và tôn giáo có mối quan hệ như thế nào?",
-            options: ["Tách biệt hoàn toàn", "Liên quan mật thiết", "Đối kháng gay gắt", "Không ảnh hưởng nhau"],
-            correctIndex: 1,
-            explanation: "Chủ nghĩa Mác - Lênin luôn xem xét vấn đề dân tộc và tôn giáo trong mối quan hệ biện chứng, gắn bó mật thiết với nhau."
+            question: "Câu 'Đoàn kết, đoàn kết, đại đoàn kết...' là của ai?",
+            options: ["V.I.Lênin", "K.Marx", "Hồ Chí Minh", "Phạm Văn Đồng"],
+            correctIndex: 2,
+            explanation: "Hồ Chí Minh: 'Đoàn kết, đoàn kết, đại đoàn kết. Thành công, thành công, đại thành công'."
         },
         {
             id: 12,
-            question: "Đặc trưng nào KHÔNG phải của dân tộc theo quan điểm Mác - Lênin?",
-            options: ["Chung lãnh thổ", "Chung ngôn ngữ", "Chung huyết thống", "Chung đời sống kinh tế"],
-            correctIndex: 2,
-            explanation: "Chung huyết thống là đặc trưng của thị tộc, bộ lạc. Dân tộc là cộng đồng chính trị - xã hội, không nhất thiết chung huyết thống."
+            question: "Tôn giáo có tính chất nào sau đây?",
+            options: ["Tính lịch sử", "Tính quần chúng", "Tính chính trị", "Cả 3 tính chất trên"],
+            correctIndex: 3,
+            explanation: "Tôn giáo có 3 tính chất: Lịch sử, Quần chúng, Chính trị."
         },
         {
             id: 13,
-            question: "Ở Việt Nam, tôn giáo nào có số lượng tín đồ đông nhất?",
-            options: ["Công giáo", "Phật giáo", "Tin Lành", "Hòa Hảo"],
+            question: "Nguồn gốc tâm lý của tôn giáo bao gồm?",
+            options: ["Sự thông minh", "Sự sợ hãi và mong muốn bình an", "Sự giàu có", "Sự tò mò"],
             correctIndex: 1,
-            explanation: "Phật giáo hiện là tôn giáo có số lượng tín đồ đông nhất tại Việt Nam."
+            explanation: "Nảy sinh từ sự sợ hãi (ốm đau, rủi ro) hoặc mong muốn được che chở, bình an."
         },
         {
             id: 14,
-            question: "Chính sách của Nhà nước ta đối với các tổ chức tôn giáo là gì?",
-            options: ["Cấm hoạt động", "Kiểm soát gay gắt", "Công nhận và tạo điều kiện hoạt động theo pháp luật", "Khuyến khích phát triển tự phát"],
+            question: "Quyền tự quyết của dân tộc bao gồm quyền nào?",
+            options: ["Chỉ được liên hiệp", "Chỉ được tách ra", "Tách ra thành lập quốc gia độc lập hoặc liên hiệp lại", "Không có quyền gì"],
             correctIndex: 2,
-            explanation: "Nhà nước công nhận và tạo điều kiện cho các tổ chức tôn giáo hoạt động theo hiến pháp và pháp luật."
+            explanation: "Quyền tự quyết bao gồm quyền tách ra hoặc tự nguyện liên hiệp lại."
         },
         {
             id: 15,
-            question: "Tín ngưỡng và tôn giáo khác nhau ở điểm cơ bản nào?",
-            options: ["Tín ngưỡng không có hệ thống giáo lý, giáo luật chặt chẽ như tôn giáo", "Tôn giáo không có niềm tin", "Tín ngưỡng chỉ có ở Việt Nam", "Giống hệt nhau"],
-            correctIndex: 0,
-            explanation: "Tôn giáo có hệ thống giáo lý, giáo luật, tổ chức chặt chẽ, còn tín ngưỡng thường mang tính dân gian, truyền thống hơn."
-        },
-        {
-            id: 16,
-            question: "Câu 'Thứ nhất là tu tại gia, thứ nhì tu chợ, thứ ba tu chùa' nói về điều gì?",
-            options: ["Địa điểm tu hành", "Thứ tự ưu tiên trong tu dưỡng đạo đức", "Cách thức xây chùa", "Quy định của nhà nước"],
-            correctIndex: 1,
-            explanation: "Câu này nhấn mạnh việc tu dưỡng đạo đức ngay trong đời sống hàng ngày (tại gia, giao tiếp xã hội) là quan trọng nhất."
-        },
-        {
-            id: 17,
-            question: "Nội dung nào KHÔNG nằm trong chính sách dân tộc của Đảng và Nhà nước ta?",
-            options: ["Đầu tư phát triển kinh tế-xã hội", "Bảo tồn văn hóa", "Đồng hóa các dân tộc", "Đào tạo cán bộ dân tộc thiểu số"],
+            question: "Mối quan hệ giữa Dân tộc và Tôn giáo ở Việt Nam?",
+            options: ["Tách rời nhau", "Luôn đối đầu", "Gắn bó mật thiết, chi phối lẫn nhau", "Không liên quan"],
             correctIndex: 2,
-            explanation: "Đảng và Nhà nước ta kiên quyết chống tư tưởng kỳ thị, chia rẽ hoặc đồng hóa cưỡng bức các dân tộc."
-        },
-        {
-            id: 18,
-            question: "Việt Nam là quốc gia:",
-            options: ["Đơn dân tộc, đơn tôn giáo", "Đa dân tộc, đa tôn giáo", "Đa dân tộc, ít tôn giáo", "Đơn dân tộc, đa tôn giáo"],
-            correctIndex: 1,
-            explanation: "Việt Nam là quốc gia thống nhất của 54 dân tộc anh em và có nhiều tôn giáo cùng hoạt động."
-        },
-        {
-            id: 19,
-            question: "Xu hướng biến đổi của tôn giáo ở Việt Nam hiện nay là gì?",
-            options: ["Thế tục hóa", "Đa dạng hóa", "Tích cực tham gia hoạt động xã hội", "Tất cả các ý trên"],
-            correctIndex: 3,
-            explanation: "Tôn giáo ở Việt Nam đang có xu hướng thế tục hóa (gắn với đời sống), đa dạng hóa và tích cực tham gia các hoạt động xã hội."
-        },
-        {
-            id: 20,
-            question: "Đại đoàn kết toàn dân tộc là đường lối chiến lược của?",
-            options: ["Cách mạng Việt Nam", "Riêng giai cấp công nhân", "Các tổ chức tôn giáo", "Cộng đồng quốc tế"],
-            correctIndex: 0,
-            explanation: "Đại đoàn kết toàn dân tộc là đường lối chiến lược của cách mạng Việt Nam, là động lực và nguồn lực to lớn trong xây dựng và bảo vệ Tổ quốc."
+            explanation: "Quan hệ này gắn bó mật thiết và chịu sự chi phối mạnh mẽ của tín ngưỡng truyền thống."
         }
     ]
 };
 
-// Match Concepts Game Content
 export const matchConceptsGameContent = {
     title: "Ghép Khái Niệm",
-    subtitle: "Kết nối các khái niệm với định nghĩa phù hợp",
+    subtitle: "Kết nối các khái niệm với định nghĩa đúng nhất",
     pairs: [
         {
             id: 1,
-            term: "Dân tộc",
-            definition: "Cộng đồng người ổn định, hình thành trong lịch sử, có chung lãnh thổ, ngôn ngữ, kinh tế và văn hóa."
+            term: "Dân tộc (Nghĩa rộng)",
+            definition: "Cộng đồng chính trị - xã hội: Chung kinh tế, lãnh thổ, nhà nước, ngôn ngữ, văn hóa."
         },
         {
             id: 2,
             term: "Tín ngưỡng",
-            definition: "Niềm tin của con người vào lực lượng siêu nhiên, thần thánh."
+            definition: "Niềm tin thiêng liêng (chưa có hệ thống giáo lý chặt chẽ như tôn giáo)."
         },
         {
             id: 3,
             term: "Tôn giáo",
-            definition: "Hình thái ý thức xã hội, phản ánh hiện thực một cách hư ảo, có giáo lý, giáo luật và tổ chức."
+            definition: "Phản ánh hư ảo sức mạnh tự nhiên/xã hội, có tổ chức, giáo lý, giáo luật."
         },
         {
             id: 4,
-            term: "Quyền tự quyết",
-            definition: "Quyền của mỗi dân tộc tự quyết định vận mệnh, chế độ chính trị và con đường phát triển của mình."
+            term: "Mê tín dị đoan",
+            definition: "Niềm tin mù quáng gây hậu quả xấu (khác với tín ngưỡng, tôn giáo)."
         },
         {
             id: 5,
-            term: "Đại đoàn kết",
-            definition: "Truyền thống quý báu của dân tộc ta, là nguồn sức mạnh to lớn để xây dựng và bảo vệ Tổ quốc."
+            term: "Mặt Tư tưởng",
+            definition: "Niềm tin, sự khác nhau về giáo lý (Mâu thuẫn không đối kháng)."
         },
         {
             id: 6,
-            term: "Bình đẳng dân tộc",
-            definition: "Các dân tộc không phân biệt đa số hay thiểu số, trình độ phát triển cao hay thấp đều có quyền lợi và nghĩa vụ ngang nhau."
+            term: "Mặt Chính trị",
+            definition: "Sự lợi dụng tôn giáo để chống phá (Mâu thuẫn đối kháng)."
         },
         {
             id: 7,
-            term: "Mê tín dị đoan",
-            definition: "Tin vào những điều mơ hồ, nhảm nhí, không phù hợp với lẽ tự nhiên, dẫn đến hậu quả xấu."
+            term: "Quyền tự quyết",
+            definition: "Quyền tách ra thành lập quốc gia độc lập hoặc tự nguyện liên hiệp."
         },
         {
             id: 8,
-            term: "Sống tốt đời, đẹp đạo",
-            definition: "Vừa thực hiện tốt nghĩa vụ công dân, vừa thực hiện tốt bổn phận của tín đồ."
+            term: "Đại đoàn kết",
+            definition: "Vũ khí chiến lược, động lực chủ yếu để xây dựng và bảo vệ Tổ quốc."
         }
     ]
 };
 
-// Flashcard Game Content
 export const flashcardsContent = {
     title: "Thẻ Ghi Nhớ",
-    subtitle: "Ôn tập kiến thức cốt lõi qua thẻ ghi nhớ thông minh",
+    subtitle: "Ôn tập cốt lõi qua thẻ ghi nhớ thông minh",
     decks: [
         {
-            id: "khai-niem",
-            title: "Khái niệm trắc nghiệm",
+            id: "cot-loi",
+            title: "Kiến thức cốt lõi",
             cards: [
                 {
                     id: 1,
-                    term: "Dân tộc (theo Mác-Lênin)",
-                    definition: "Cộng đồng người ổn định, hình thành trong lịch sử, có chung lãnh thổ, ngôn ngữ, kinh tế, văn hóa và tâm lý tộc người."
+                    term: "Dân tộc (Nghĩa rộng)",
+                    definition: "Là Quốc gia dân tộc (Nation) với 5 đặc trưng:\n1. Chung kinh tế\n2. Chung lãnh thổ\n3. Chung nhà nước\n4. Chung ngôn ngữ\n5. Chung văn hóa"
                 },
                 {
                     id: 2,
-                    term: "5 Đặc trưng của dân tộc",
-                    definition: "1. Chung lãnh thổ\n2. Chung ngôn ngữ\n3. Chung đời sống kinh tế\n4. Chung văn hóa và tâm lý\n5. Có ý thức tự giác dân tộc"
+                    term: "Dân tộc (Nghĩa hẹp)",
+                    definition: "Là Tộc người (Ethnies) với 3 đặc trưng:\n1. Chung về ngôn ngữ\n2. Chung về văn hóa\n3. Ý thức tự giác tộc người (Quan trọng nhất)"
                 },
                 {
                     id: 3,
-                    term: "Quyền bình đẳng dân tộc",
-                    definition: "Các dân tộc hoàn toàn ngang quyền nhau, không phân biệt lớn nhỏ, trình độ phát triển cao thấp. Không có đặc quyền hay đặc lợi."
+                    term: "Cương lĩnh dân tộc Lênin",
+                    definition: "1. Các dân tộc hoàn toàn bình đẳng\n2. Các dân tộc được quyền tự quyết\n3. Liên hiệp công nhân tất cả các dân tộc"
                 },
                 {
                     id: 4,
-                    term: "Quyền tự quyết dân tộc",
-                    definition: "Quyền làm chủ vận mệnh của mỗi dân tộc: quyền tự lựa chọn chế độ chính trị, con đường phát triển và quyền phân lập hoặc liên hiệp."
+                    term: "Đặc điểm Dân tộc VN",
+                    definition: "- 54 dân tộc (Kinh đa số)\n- Cư trú xen kẽ\n- Phân bố địa bàn chiến lược\n- Trình độ không đều\n- Đoàn kết & Bản sắc riêng"
                 },
                 {
                     id: 5,
-                    term: "Liên hiệp công nhân",
-                    definition: "Sự đoàn kết giai cấp công nhân các dân tộc nhằm chống lại áp bức giai cấp và giải phóng dân tộc."
+                    term: "Bản chất tôn giáo",
+                    definition: "Là sự phản ánh hư ảo sức mạnh tự nhiên & xã hội vào đầu óc con người. Lực lượng trần thế biến thành siêu trần thế."
                 },
                 {
                     id: 6,
-                    term: "Bản chất tôn giáo",
-                    definition: "Là hình thái ý thức xã hội, phản ánh hư ảo sức mạnh của tự nhiên và xã hội vào đầu óc con người."
+                    term: "3 Nguồn gốc tôn giáo",
+                    definition: "1. Tự nhiên & KT-XH (Yếu đuối, bất công)\n2. Nhận thức (Khoa học chưa giải thích được)\n3. Tâm lý (Sợ hãi, mong bình an)"
                 },
                 {
                     id: 7,
-                    term: "3 Nguồn gốc của tôn giáo",
-                    definition: "1. Nguồn gốc Tự nhiên & Kinh tế - Xã hội\n2. Nguồn gốc Nhận thức\n3. Nguồn gốc Tâm lý"
+                    term: "3 Tính chất tôn giáo",
+                    definition: "1. Tính Lịch sử (Biến đổi theo thời đại)\n2. Tính Quần chúng (Nhu cầu đông đảo)\n3. Tính Chính trị (Phản ánh lợi ích giai cấp)"
                 },
                 {
                     id: 8,
-                    term: "3 Tính chất của tôn giáo",
-                    definition: "1. Tính lịch sử (ra đời, tồn tại và biến đổi)\n2. Tính quần chúng (nhu cầu tinh thần của đông đảo nhân dân)\n3. Tính chính trị (phản ánh lợi ích giai cấp)"
+                    term: "4 Nguyên tắc 'Vàng'",
+                    definition: "1. Tôn trọng tự do tín ngưỡng\n2. Khắc phục tiêu cực gắn với xây dựng XH mới\n3. Phân biệt Chính trị & Tư tưởng\n4. Quan điểm lịch sử cụ thể"
                 },
                 {
                     id: 9,
-                    term: "Tín ngưỡng",
-                    definition: "Niềm tin của con người vào cái thiêng liêng, là nhu cầu tâm linh (thờ cúng tổ tiên, thờ mẫu...) nhưng chưa có hệ thống giáo lý, tổ chức chặt chẽ như tôn giáo."
+                    term: "Chính trị vs Tư tưởng",
+                    definition: "- Tư tưởng: Niềm tin, khác biệt giáo lý -> Mâu thuẫn không đối kháng.\n- Chính trị: Lợi dụng chống phá -> Mâu thuẫn đối kháng."
                 },
                 {
                     id: 10,
-                    term: "Mê tín dị đoan",
-                    definition: "Niềm tin mù quáng vào những điều nhảm nhí, thần bí, trái với lẽ tự nhiên và khoa học, thường gây hậu quả xấu."
+                    term: "Đặc điểm Tôn giáo VN",
+                    definition: "- Đa tôn giáo, sống hòa bình\n- Tín đồ là người lao động\n- Chức sắc có uy tín\n- Quan hệ quốc tế rộng rãi"
                 },
                 {
                     id: 11,
-                    term: "Chính sách tôn giáo VN",
-                    definition: "Tôn trọng tự do tín ngưỡng; Bình đẳng giữa các tôn giáo; Đoàn kết lương - giáo; Nghiêm cấm lợi dụng tôn giáo để chống phá."
+                    term: "Chính sách Tôn giáo",
+                    definition: "- Tôn giáo là nhu cầu lâu dài\n- Đại đoàn kết lương - giáo\n- Vận động quần chúng là cốt lõi\n- Trách nhiệm cả hệ thống trị"
                 },
                 {
                     id: 12,
-                    term: "Phương châm sống đạo",
-                    definition: "\"Tốt đời, đẹp đạo\", \"Sống phúc âm trong lòng dân tộc\", đồng hành cùng dân tộc và phục vụ hạnh phúc của đồng bào."
-                },
-                {
-                    id: 13,
-                    term: "Đại đoàn kết dân tộc",
-                    definition: "Đường lối chiến lược của cách mạng Việt Nam, là nguồn sức mạnh, động lực chủ yếu và là nhân tố có ý nghĩa quyết định bảo đảm thắng lợi bền vững."
-                },
-                {
-                    id: 14,
-                    term: "Xu hướng tôn giáo hiện nay",
-                    definition: "Đa dạng hóa, thế tục hóa (gắn bó với đời sống xã hội) và tích cực tham gia các hoạt động nhân đạo, từ thiện, giáo dục."
+                    term: "Tín ngưỡng vs Tôn giáo",
+                    definition: "- Tín ngưỡng: Niềm tin thiêng liêng (thờ cúng, dân gian).\n- Tôn giáo: Có tổ chức, giáo lý, giáo luật chặt chẽ."
                 }
             ]
         }
     ]
 };
 
-// Navigation items
 export const navItems = [
     { label: "Trang chủ", href: "#hero" },
     { label: "Nội dung", href: "#content" },
